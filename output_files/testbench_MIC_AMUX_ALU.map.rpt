@@ -1,5 +1,5 @@
 Analysis & Synthesis report for testbench_MIC_AMUX_ALU
-Tue Oct 19 20:51:18 2021
+Thu Oct 21 20:12:16 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,7 +10,16 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -34,109 +43,114 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue Oct 19 20:51:18 2021           ;
-; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name               ; testbench_MIC_AMUX_ALU                      ;
-; Top-level Entity Name       ; testbench_MIC_AMUX_ALU                      ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Oct 21 20:12:16 2021       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; testbench_MIC_AMUX_ALU                      ;
+; Top-level Entity Name           ; PROJETO_MIC                                 ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 261                                         ;
+; Total pins                      ; 73                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                                     ;
-+---------------------------------------------------------------------------------+------------------------+------------------------+
-; Option                                                                          ; Setting                ; Default Value          ;
-+---------------------------------------------------------------------------------+------------------------+------------------------+
-; Device                                                                          ; 5CGXFC7C7F23C8         ;                        ;
-; Top-level entity name                                                           ; testbench_MIC_AMUX_ALU ; testbench_MIC_AMUX_ALU ;
-; Family name                                                                     ; Cyclone V              ; Cyclone V              ;
-; Use smart compilation                                                           ; Off                    ; Off                    ;
-; Enable parallel Assembler and Timing Analyzer during compilation                ; On                     ; On                     ;
-; Enable compact report table                                                     ; Off                    ; Off                    ;
-; Restructure Multiplexers                                                        ; Auto                   ; Auto                   ;
-; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                    ; Off                    ;
-; Create Debugging Nodes for IP Cores                                             ; Off                    ; Off                    ;
-; Preserve fewer node names                                                       ; On                     ; On                     ;
-; Intel FPGA IP Evaluation Mode                                                   ; Enable                 ; Enable                 ;
-; Verilog Version                                                                 ; Verilog_2001           ; Verilog_2001           ;
-; VHDL Version                                                                    ; VHDL_1993              ; VHDL_1993              ;
-; State Machine Processing                                                        ; Auto                   ; Auto                   ;
-; Safe State Machine                                                              ; Off                    ; Off                    ;
-; Extract Verilog State Machines                                                  ; On                     ; On                     ;
-; Extract VHDL State Machines                                                     ; On                     ; On                     ;
-; Ignore Verilog initial constructs                                               ; Off                    ; Off                    ;
-; Iteration limit for constant Verilog loops                                      ; 5000                   ; 5000                   ;
-; Iteration limit for non-constant Verilog loops                                  ; 250                    ; 250                    ;
-; Add Pass-Through Logic to Inferred RAMs                                         ; On                     ; On                     ;
-; Infer RAMs from Raw Logic                                                       ; On                     ; On                     ;
-; Parallel Synthesis                                                              ; On                     ; On                     ;
-; DSP Block Balancing                                                             ; Auto                   ; Auto                   ;
-; NOT Gate Push-Back                                                              ; On                     ; On                     ;
-; Power-Up Don't Care                                                             ; On                     ; On                     ;
-; Remove Redundant Logic Cells                                                    ; Off                    ; Off                    ;
-; Remove Duplicate Registers                                                      ; On                     ; On                     ;
-; Ignore CARRY Buffers                                                            ; Off                    ; Off                    ;
-; Ignore CASCADE Buffers                                                          ; Off                    ; Off                    ;
-; Ignore GLOBAL Buffers                                                           ; Off                    ; Off                    ;
-; Ignore ROW GLOBAL Buffers                                                       ; Off                    ; Off                    ;
-; Ignore LCELL Buffers                                                            ; Off                    ; Off                    ;
-; Ignore SOFT Buffers                                                             ; On                     ; On                     ;
-; Limit AHDL Integers to 32 Bits                                                  ; Off                    ; Off                    ;
-; Optimization Technique                                                          ; Balanced               ; Balanced               ;
-; Carry Chain Length                                                              ; 70                     ; 70                     ;
-; Auto Carry Chains                                                               ; On                     ; On                     ;
-; Auto Open-Drain Pins                                                            ; On                     ; On                     ;
-; Perform WYSIWYG Primitive Resynthesis                                           ; Off                    ; Off                    ;
-; Auto ROM Replacement                                                            ; On                     ; On                     ;
-; Auto RAM Replacement                                                            ; On                     ; On                     ;
-; Auto DSP Block Replacement                                                      ; On                     ; On                     ;
-; Auto Shift Register Replacement                                                 ; Auto                   ; Auto                   ;
-; Allow Shift Register Merging across Hierarchies                                 ; Auto                   ; Auto                   ;
-; Auto Clock Enable Replacement                                                   ; On                     ; On                     ;
-; Strict RAM Replacement                                                          ; Off                    ; Off                    ;
-; Allow Synchronous Control Signals                                               ; On                     ; On                     ;
-; Force Use of Synchronous Clear Signals                                          ; Off                    ; Off                    ;
-; Auto Resource Sharing                                                           ; Off                    ; Off                    ;
-; Allow Any RAM Size For Recognition                                              ; Off                    ; Off                    ;
-; Allow Any ROM Size For Recognition                                              ; Off                    ; Off                    ;
-; Allow Any Shift Register Size For Recognition                                   ; Off                    ; Off                    ;
-; Use LogicLock Constraints during Resource Balancing                             ; On                     ; On                     ;
-; Ignore translate_off and synthesis_off directives                               ; Off                    ; Off                    ;
-; Timing-Driven Synthesis                                                         ; On                     ; On                     ;
-; Report Parameter Settings                                                       ; On                     ; On                     ;
-; Report Source Assignments                                                       ; On                     ; On                     ;
-; Report Connectivity Checks                                                      ; On                     ; On                     ;
-; Ignore Maximum Fan-Out Assignments                                              ; Off                    ; Off                    ;
-; Synchronization Register Chain Length                                           ; 3                      ; 3                      ;
-; Power Optimization During Synthesis                                             ; Normal compilation     ; Normal compilation     ;
-; HDL message level                                                               ; Level2                 ; Level2                 ;
-; Suppress Register Optimization Related Messages                                 ; Off                    ; Off                    ;
-; Number of Removed Registers Reported in Synthesis Report                        ; 5000                   ; 5000                   ;
-; Number of Swept Nodes Reported in Synthesis Report                              ; 5000                   ; 5000                   ;
-; Number of Inverted Registers Reported in Synthesis Report                       ; 100                    ; 100                    ;
-; Clock MUX Protection                                                            ; On                     ; On                     ;
-; Auto Gated Clock Conversion                                                     ; Off                    ; Off                    ;
-; Block Design Naming                                                             ; Auto                   ; Auto                   ;
-; SDC constraint protection                                                       ; Off                    ; Off                    ;
-; Synthesis Effort                                                                ; Auto                   ; Auto                   ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                     ; On                     ;
-; Pre-Mapping Resynthesis Optimization                                            ; Off                    ; Off                    ;
-; Analysis & Synthesis Message Level                                              ; Medium                 ; Medium                 ;
-; Disable Register Merging Across Hierarchies                                     ; Auto                   ; Auto                   ;
-; Resource Aware Inference For Block RAM                                          ; On                     ; On                     ;
-; Automatic Parallel Synthesis                                                    ; On                     ; On                     ;
-; Partial Reconfiguration Bitstream ID                                            ; Off                    ; Off                    ;
-+---------------------------------------------------------------------------------+------------------------+------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                 ;
++---------------------------------------------------------------------------------+--------------------+------------------------+
+; Option                                                                          ; Setting            ; Default Value          ;
++---------------------------------------------------------------------------------+--------------------+------------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                        ;
+; Top-level entity name                                                           ; PROJETO_MIC        ; testbench_MIC_AMUX_ALU ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V              ;
+; Use smart compilation                                                           ; Off                ; Off                    ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                     ;
+; Enable compact report table                                                     ; Off                ; Off                    ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto                   ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                    ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                    ;
+; Preserve fewer node names                                                       ; On                 ; On                     ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable                 ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001           ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993              ;
+; State Machine Processing                                                        ; Auto               ; Auto                   ;
+; Safe State Machine                                                              ; Off                ; Off                    ;
+; Extract Verilog State Machines                                                  ; On                 ; On                     ;
+; Extract VHDL State Machines                                                     ; On                 ; On                     ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                    ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000                   ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                    ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                     ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                     ;
+; Parallel Synthesis                                                              ; On                 ; On                     ;
+; DSP Block Balancing                                                             ; Auto               ; Auto                   ;
+; NOT Gate Push-Back                                                              ; On                 ; On                     ;
+; Power-Up Don't Care                                                             ; On                 ; On                     ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                    ;
+; Remove Duplicate Registers                                                      ; On                 ; On                     ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                    ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                    ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                    ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                    ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                    ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                     ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                    ;
+; Optimization Technique                                                          ; Balanced           ; Balanced               ;
+; Carry Chain Length                                                              ; 70                 ; 70                     ;
+; Auto Carry Chains                                                               ; On                 ; On                     ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                     ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                    ;
+; Auto ROM Replacement                                                            ; On                 ; On                     ;
+; Auto RAM Replacement                                                            ; On                 ; On                     ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                     ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto                   ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto                   ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                     ;
+; Strict RAM Replacement                                                          ; Off                ; Off                    ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                     ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                    ;
+; Auto Resource Sharing                                                           ; Off                ; Off                    ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                    ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                    ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                    ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                     ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                    ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                     ;
+; Report Parameter Settings                                                       ; On                 ; On                     ;
+; Report Source Assignments                                                       ; On                 ; On                     ;
+; Report Connectivity Checks                                                      ; On                 ; On                     ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                    ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                      ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation     ;
+; HDL message level                                                               ; Level2             ; Level2                 ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                    ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000                   ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000                   ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                    ;
+; Clock MUX Protection                                                            ; On                 ; On                     ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                    ;
+; Block Design Naming                                                             ; Auto               ; Auto                   ;
+; SDC constraint protection                                                       ; Off                ; Off                    ;
+; Synthesis Effort                                                                ; Auto               ; Auto                   ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                     ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                    ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium                 ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto                   ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                     ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                     ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                    ;
++---------------------------------------------------------------------------------+--------------------+------------------------+
 
 
 +------------------------------------------+
@@ -148,11 +162,192 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                               ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+; MIC_ULA.vhd                      ; yes             ; User VHDL File  ; C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_ULA.vhd           ;         ;
+; MIC_BankRegisters.vhd            ; yes             ; User VHDL File  ; C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_BankRegisters.vhd ;         ;
+; PROJETO_MIC.vhd                  ; yes             ; User VHDL File  ; C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd       ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 237       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 270       ;
+;     -- 7 input functions                    ; 4         ;
+;     -- 6 input functions                    ; 131       ;
+;     -- 5 input functions                    ; 84        ;
+;     -- 4 input functions                    ; 45        ;
+;     -- <=3 input functions                  ; 6         ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 261       ;
+;                                             ;           ;
+; I/O pins                                    ; 73        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 261       ;
+; Total fan-out                               ; 2630      ;
+; Average fan-out                             ; 3.88      ;
++---------------------------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                     ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name       ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-------------------+--------------+
+; |PROJETO_MIC                     ; 270 (0)             ; 261 (46)                  ; 0                 ; 0          ; 73   ; 0            ; |PROJETO_MIC                             ; PROJETO_MIC       ; work         ;
+;    |MIC_BankRegisters:Registers| ; 97 (97)             ; 215 (215)                 ; 0                 ; 0          ; 0    ; 0            ; |PROJETO_MIC|MIC_BankRegisters:Registers ; MIC_BankRegisters ; work         ;
+;    |MIC_ULA:MUX_ALU_DESLOCADOR|  ; 173 (173)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO_MIC|MIC_ULA:MUX_ALU_DESLOCADOR  ; MIC_ULA           ; work         ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                        ;
++--------------------------------------------------+----------------------------------------+
+; Register name                                    ; Reason for Removal                     ;
++--------------------------------------------------+----------------------------------------+
+; MIC_BankRegisters:Registers|bankRegisters[7][15] ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[8][15] ; Stuck at GND due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[7][14] ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[8][14] ; Stuck at GND due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[7][13] ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[8][13] ; Stuck at GND due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[7][12] ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[8][12] ; Stuck at GND due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[7][11] ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[8][11] ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[7][10] ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[8][10] ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[7][9]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[8][9]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[7][8]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[8][8]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[7][7]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[8][7]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[9][7]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[7][6]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[8][6]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[9][6]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[7][5]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[8][5]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[9][5]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[7][4]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[8][4]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[9][4]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[7][3]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[8][3]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[9][3]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[7][2]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[8][2]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[9][2]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[7][1]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[8][1]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[9][1]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[7][0]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[8][0]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[9][0]  ; Stuck at VCC due to stuck port data_in ;
+; MIC_BankRegisters:Registers|bankRegisters[6][0]  ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 41           ;                                        ;
++--------------------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                   ;
++-------------------------------------------------+---------------------------+-------------------------------------------------+
+; Register name                                   ; Reason for Removal        ; Registers Removed due to This Register          ;
++-------------------------------------------------+---------------------------+-------------------------------------------------+
+; MIC_BankRegisters:Registers|bankRegisters[7][1] ; Stuck at VCC              ; MIC_BankRegisters:Registers|bankRegisters[6][0] ;
+;                                                 ; due to stuck port data_in ;                                                 ;
++-------------------------------------------------+---------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 261   ;
+; Number of registers using Synchronous Clear  ; 39    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 261   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 259   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |PROJETO_MIC|MIC_BankRegisters:Registers|bankRegisters[9][10] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |PROJETO_MIC|MIC_BankRegisters:Registers|bankRegisters[5][11] ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |PROJETO_MIC|MIC_BankRegisters:Registers|bankRegisters[6][8]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |PROJETO_MIC|MIC_BankRegisters:Registers|bankRegisters[8][12] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |PROJETO_MIC|MIC_BankRegisters:Registers|bankRegisters[9][4]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |PROJETO_MIC|MIC_BankRegisters:Registers|bankRegisters[7][8]  ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PROJETO_MIC|MIC_BankRegisters:Registers|bankRegisters[8][4]  ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |PROJETO_MIC|MIC_ULA:MUX_ALU_DESLOCADOR|Mux7                  ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |PROJETO_MIC|MIC_ULA:MUX_ALU_DESLOCADOR|Mux24                 ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |PROJETO_MIC|MIC_BankRegisters:Registers|Mux22                ;
+; 17:1               ; 16 bits   ; 176 LEs       ; 176 LEs              ; 0 LEs                  ; No         ; |PROJETO_MIC|MIC_ULA:MUX_ALU_DESLOCADOR|Input_A[15]           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 261                         ;
+;     CLR               ; 2                           ;
+;     ENA CLR           ; 220                         ;
+;     ENA CLR SCLR      ; 39                          ;
+; arriav_lcell_comb     ; 270                         ;
+;     arith             ; 16                          ;
+;         4 data inputs ; 16                          ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 250                         ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 29                          ;
+;         5 data inputs ; 84                          ;
+;         6 data inputs ; 131                         ;
+; boundary_port         ; 73                          ;
+;                       ;                             ;
+; Max LUT depth         ; 6.70                        ;
+; Average LUT depth     ; 5.07                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -161,27 +356,41 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Oct 19 20:50:58 2021
+    Info: Processing started: Thu Oct 21 20:11:39 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off testbench_MIC_AMUX_ALU -c testbench_MIC_AMUX_ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file testbench_mic_amux_alu.vhd
     Info (12022): Found design unit 1: testbench_MIC_AMUX_ALU-tb_MIC File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd Line: 8
     Info (12023): Found entity 1: testbench_MIC_AMUX_ALU File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd Line: 5
-Info (12127): Elaborating entity "testbench_MIC_AMUX_ALU" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at testbench_MIC_AMUX_ALU.vhd(23): used explicit default value for signal "Signal_ENC" because signal was never assigned a value File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd Line: 23
-Warning (10540): VHDL Signal Declaration warning at testbench_MIC_AMUX_ALU.vhd(39): used explicit default value for signal "Signal_A_Address" because signal was never assigned a value File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd Line: 39
-Warning (10540): VHDL Signal Declaration warning at testbench_MIC_AMUX_ALU.vhd(40): used explicit default value for signal "Signal_B_Address" because signal was never assigned a value File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd Line: 40
-Warning (10540): VHDL Signal Declaration warning at testbench_MIC_AMUX_ALU.vhd(41): used explicit default value for signal "Signal_C_Address" because signal was never assigned a value File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd Line: 41
-Warning (10540): VHDL Signal Declaration warning at testbench_MIC_AMUX_ALU.vhd(42): used explicit default value for signal "Signal_C_Input" because signal was never assigned a value File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd Line: 42
-Warning (10036): Verilog HDL or VHDL warning at testbench_MIC_AMUX_ALU.vhd(43): object "Signal_A_Output" assigned a value but never read File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd Line: 43
-Warning (10036): Verilog HDL or VHDL warning at testbench_MIC_AMUX_ALU.vhd(44): object "Signal_B_Output" assigned a value but never read File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd Line: 44
-Error (10533): VHDL Wait Statement error at testbench_MIC_AMUX_ALU.vhd(96): Wait Statement must contain condition clause with UNTIL keyword File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd Line: 96
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 8 warnings
-    Error: Peak virtual memory: 4820 megabytes
-    Error: Processing ended: Tue Oct 19 20:51:18 2021
-    Error: Elapsed time: 00:00:20
-    Error: Total CPU time (on all processors): 00:00:39
+Info (12021): Found 2 design units, including 1 entities, in source file mic_ula.vhd
+    Info (12022): Found design unit 1: MIC_ULA-behavior File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_ULA.vhd Line: 19
+    Info (12023): Found entity 1: MIC_ULA File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_ULA.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mic_bankregisters.vhd
+    Info (12022): Found design unit 1: MIC_BankRegisters-behavior File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_BankRegisters.vhd Line: 20
+    Info (12023): Found entity 1: MIC_BankRegisters File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_BankRegisters.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file projeto_mic.vhd
+    Info (12022): Found design unit 1: PROJETO_MIC-behavior File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd Line: 37
+    Info (12023): Found entity 1: PROJETO_MIC File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd Line: 8
+Info (12127): Elaborating entity "PROJETO_MIC" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at PROJETO_MIC.vhd(120): signal "REG_MAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd Line: 120
+Warning (10492): VHDL Process Statement warning at PROJETO_MIC.vhd(131): signal "REG_MBR_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd Line: 131
+Warning (10492): VHDL Process Statement warning at PROJETO_MIC.vhd(143): signal "REG_MBR_IN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd Line: 143
+Warning (10492): VHDL Process Statement warning at PROJETO_MIC.vhd(155): signal "RD_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd Line: 155
+Warning (10492): VHDL Process Statement warning at PROJETO_MIC.vhd(166): signal "WR_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd Line: 166
+Info (12128): Elaborating entity "MIC_BankRegisters" for hierarchy "MIC_BankRegisters:Registers" File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd Line: 87
+Info (12128): Elaborating entity "MIC_ULA" for hierarchy "MIC_ULA:MUX_ALU_DESLOCADOR" File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd Line: 100
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 604 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 41 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 531 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4849 megabytes
+    Info: Processing ended: Thu Oct 21 20:12:16 2021
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:00:55
 
 
