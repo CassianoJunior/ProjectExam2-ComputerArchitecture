@@ -69,6 +69,7 @@ COMPONENT MIC_BankRegisters IS
 		B_Address	: IN std_logic_vector(3 DOWNTO 0);
 		C_Address	: IN std_logic_vector(3 DOWNTO 0);
 		C_Input		: IN std_logic_vector(15 DOWNTO 0);
+
 		A_Output	: OUT std_logic_vector(15 DOWNTO 0);
 		B_Output	: OUT std_logic_vector(15 DOWNTO 0)
 	);
@@ -91,6 +92,32 @@ END COMPONENT;
 
 BEGIN
 
+DUT_BR : entity work.MIC_BankRegisters
+	PORT MAP (
+		Reset		=> Signal_Reset,
+		Clk		    => Signal_Clk,
+		Enc		    => Signal_Enc,
+		A_Address	=> Signal_A_Address,
+		B_Address	=> Signal_B_Address,
+		C_Address	=> Signal_C_Address,
+		C_Input		=> Signal_C_Input,
+		A_Output	=> Signal_A_Output,
+		B_Output	=> Signal_B_Output
+	);
+
+DUT_ULA : entity work.MIC_ULA
+	PORT MAP (
+		amux       => Signal_AMUX,
+		alu        => Signal_ALU,
+		sh         => Signal_SH,
+		A_Input    => Signal_A_Input,
+		B_Input    => Signal_B_Input,
+		MBR_Input  => Signal_MBR_Input,
+		z          => Signal_Z,
+		n          => Signal_N,
+		SH_Output  => Signal_SH_Output
+	);
+
 Clock_Process : PROCESS 
   Begin
     Signal_Clk <= '0';
@@ -99,8 +126,8 @@ Clock_Process : PROCESS
     Clk_count <= Clk_count + 1;
     wait for Clk_period/2;  --for next 0.5 ns signal is '1'.
 
-IF (Clk_count = 1) THEN     
-REPORT "Stopping simulation after 1 cycles";
+IF (Clk_count = 2) THEN     
+REPORT "Stopping simulation after 40 cycles";
     	  Wait;       
 END IF;
 End Process Clock_Process;
@@ -115,40 +142,18 @@ Reset_Process : PROCESS
     wait;
 End Process Reset_Process;
 
-DUT_BR : MIC_BankRegisters
-	PORT MAP (
-		Reset		=> Signal_Reset,
-		Clk		    => Signal_Clk,
-		Enc		    => Signal_Enc,
-		A_Address	=> Signal_A_Address,
-		B_Address	=> Signal_B_Address,
-		C_Address	=> Signal_C_Address,
-		C_Input		=> Signal_C_Input,
-		A_Output	=> Signal_A_Output,
-		B_Output	=> Signal_B_Output
-	);
-
-DUT_ULA : MIC_ULA
-	PORT MAP (
-		amux       => Signal_AMUX,
-		alu        => Signal_ALU,
-		sh         => Signal_SH,
-		A_Input    => Signal_A_Input,
-		B_Input    => Signal_B_Input,
-		MBR_Input  => Signal_MBR_Input,
-		z          => Signal_Z,
-		n          => Signal_N,
-		SH_Output  => Signal_SH_Output
-	);
 
 TEST : PROCESS
 	BEGIN
+		--PC := PC + 1;
 		Signal_A_Address <= "0000";
 		Signal_B_Address <= "0110";
 		Signal_AMUX <= '0';
 		Signal_ALU <= "00";
 		Signal_SH <= "00";
 		Signal_ENC <= '1';
+		Signal_C_Address <= "0010";
+
 		wait for 40 ns;
 END PROCESS TEST;
 
