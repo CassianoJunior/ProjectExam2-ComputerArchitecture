@@ -3,6 +3,9 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
 ENTITY testbench_MIC_AMUX_ALU is
+	port(
+		PC : OUT STD_LOGIC_VECTOR(15 downto 0)
+	);
 END testbench_MIC_AMUX_ALU;
 
 architecture tb_MIC of testbench_MIC_AMUX_ALU is 
@@ -29,25 +32,11 @@ Signal Signal_MEM_TO_MBR : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
 SIGNAL Signal_DATA_OK    : STD_LOGIC := '0';
 
 Signal Signal_MBR_TO_MEM : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
-Signal Signal_MAR_OUTPUT : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
+Signal Signal_MAR_OUTPUT : STD_LOGIC_VECTOR(11 DOWNTO 0) := "000000000000";
 Signal Signal_RD_OUTPUT  : STD_LOGIC := '0';
 Signal Signal_WR_OUTPUT  : STD_LOGIC := '0';
 Signal Signal_Z          : STD_LOGIC := '0';
 Signal Signal_N          : STD_LOGIC := '0';
-
---Sinais do Banco de Registradores
-SIGNAL Signal_A_Address : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0000";
-SIGNAL Signal_B_Address : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0000";
-SIGNAL Signal_C_Address : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0000";
-SIGNAL Signal_C_Input   : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
-SIGNAL Signal_A_Output  : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
-SIGNAL Signal_B_Output  : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
-
---Sinais ULA
-SIGNAL Signal_A_Input   : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
-SIGNAL Signal_B_Input   : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
-SIGNAL Signal_MBR_Input : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
-SIGNAL Signal_SH_Output : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
 
 
 --Sinais da arquitetura
@@ -60,62 +49,59 @@ SIGNAL Signal_REG_MBR_OUT    : STD_LOGIC_VECTOR(15 DOWNTO 0) := "000000000000000
 SIGNAL Signal_REG_MAR        : STD_LOGIC_VECTOR(11 DOWNTO 0):= "000000000000";
 SIGNAL Signal_RD_OUT, WR_OUT : STD_LOGIC := '0';
 
-COMPONENT MIC_BankRegisters IS
+COMPONENT PROJETO_MIC IS
 	PORT(
-		Reset		: IN std_logic;
-		Clk			: IN std_logic;
-		Enc			: IN std_logic;
-		A_Address	: IN std_logic_vector(3 DOWNTO 0);
-		B_Address	: IN std_logic_vector(3 DOWNTO 0);
-		C_Address	: IN std_logic_vector(3 DOWNTO 0);
-		C_Input		: IN std_logic_vector(15 DOWNTO 0);
-
-		A_Output	: OUT std_logic_vector(15 DOWNTO 0);
-		B_Output	: OUT std_logic_vector(15 DOWNTO 0)
-	);
-END COMPONENT;
-
-COMPONENT MIC_ULA IS
-	PORT(
-		amux      : IN std_logic;
-		alu       : IN std_logic_vector(1 downto 0);
-		sh        : IN std_logic_vector(1 downto 0);
-		A_Input   : IN std_logic_vector(15 DOWNTO 0);
-		B_Input   : IN std_logic_vector(15 DOWNTO 0);
-		MBR_Input : IN std_logic_vector(15 DOWNTO 0);
-
-		N         : OUT std_logic;
-		Z         : OUT std_logic;
-		SH_Output : OUT std_logic_vector(15 DOWNTO 0)
+		CLK        : IN STD_LOGIC;
+		RESET      : IN STD_LOGIC;
+		AMUX       : IN STD_LOGIC;
+		ALU        : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		MBR        : IN STD_LOGIC;
+		MAR        : IN STD_LOGIC;
+		RD         : IN STD_LOGIC;
+		WR         : IN STD_LOGIC;
+		ENC        : IN STD_LOGIC;
+		C          : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		B          : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		A          : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		SH         : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		MEM_TO_MBR : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		DATA_OK    : IN STD_LOGIC;
+		
+		MBR_TO_MEM : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+		MAR_OUTPUT : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+		RD_OUTPUT  : OUT STD_LOGIC;
+		WR_OUTPUT  : OUT STD_LOGIC;
+		Z          : OUT STD_LOGIC;
+		N          : OUT STD_LOGIC
 	);
 END COMPONENT;
 
 BEGIN
 
-DUT_BR : entity work.MIC_BankRegisters
+MIC : PROJETO_MIC
 	PORT MAP (
-		Reset		=> Signal_Reset,
-		Clk		    => Signal_Clk,
-		Enc		    => Signal_Enc,
-		A_Address	=> Signal_A_Address,
-		B_Address	=> Signal_B_Address,
-		C_Address	=> Signal_C_Address,
-		C_Input		=> Signal_C_Input,
-		A_Output	=> Signal_A_Output,
-		B_Output	=> Signal_B_Output
-	);
-
-DUT_ULA : entity work.MIC_ULA
-	PORT MAP (
-		amux       => Signal_AMUX,
-		alu        => Signal_ALU,
-		sh         => Signal_SH,
-		A_Input    => Signal_A_Input,
-		B_Input    => Signal_B_Input,
-		MBR_Input  => Signal_MBR_Input,
-		z          => Signal_Z,
-		n          => Signal_N,
-		SH_Output  => Signal_SH_Output
+		CLK         => Signal_CLK,
+		RESET       => Signal_RESET,
+		AMUX        => Signal_AMUX,
+		ALU         => Signal_ALU,
+		MBR         => Signal_MBR,
+		MAR         => Signal_MAR,
+		RD          => Signal_RD,
+		WR          => Signal_WR,
+		ENC         => Signal_ENC,
+		C           => Signal_C,
+		B           => Signal_B,
+		A           => Signal_A,
+		SH          => Signal_SH,
+		MEM_TO_MBR  => Signal_MEM_TO_MBR,
+		DATA_OK     => Signal_DATA_OK,
+		
+		MBR_TO_MEM  => Signal_MBR_TO_MEM,
+		MAR_OUTPUT  => Signal_MAR_OUTPUT,
+		RD_OUTPUT   => Signal_RD_OUTPUT,
+		WR_OUTPUT   => Signal_WR_OUTPUT,
+		Z           => Signal_Z,
+		N           => Signal_N
 	);
 
 Clock_Process : PROCESS 
@@ -145,16 +131,23 @@ End Process Reset_Process;
 
 TEST : PROCESS
 	BEGIN
+		wait for 40 ns;
 		--PC := PC + 1;
-		Signal_A_Address <= "0000";
-		Signal_B_Address <= "0110";
 		Signal_AMUX <= '0';
 		Signal_ALU <= "00";
-		Signal_SH <= "00";
+		Signal_MBR <= '0';
+		Signal_MAR <= '0';
+		Signal_RD <= '0';
+		Signal_WR <= '0';
 		Signal_ENC <= '1';
-		Signal_C_Address <= "0010";
+		Signal_C <= "0000";
+		Signal_B <= "0110";
+		Signal_A <= "0000";
+		Signal_SH <= "00";
+		Signal_C_BUS <= "0000000000000001";
+		
 
-		wait for 40 ns;
+		wait;
 END PROCESS TEST;
 
 
