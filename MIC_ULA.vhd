@@ -10,6 +10,7 @@ entity MIC_ULA is
     A_Input		: IN std_logic_vector(15 DOWNTO 0);
     B_Input		: IN std_logic_vector(15 DOWNTO 0);
     MBR_Input	: IN std_logic_vector(15 DOWNTO 0);
+    
     N			    : OUT std_logic;
     Z				  : OUT std_logic;
     SH_Output	: OUT std_logic_vector(15 DOWNTO 0)

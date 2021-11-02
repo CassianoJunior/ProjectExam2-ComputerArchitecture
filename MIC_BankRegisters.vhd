@@ -12,6 +12,7 @@ entity MIC_BankRegisters is
     B_Address  : in std_logic_vector(3 DOWNTO 0);
     C_Address  : in std_logic_vector(3 DOWNTO 0);
     C_Input    : in std_logic_vector(15 DOWNTO 0);
+	 
     A_Output   : out std_logic_vector(15 DOWNTO 0);
     B_Output   : out std_logic_vector(15 DOWNTO 0)
   );

@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_ULA.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:35:05 on Oct 28,2021
+# Start time: 12:04:53 on Nov 02,2021
 # vcom -reportprogress 300 -93 -work work C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_ULA.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -21,11 +21,11 @@
 # -- Loading package STD_LOGIC_SIGNED
 # -- Compiling entity MIC_ULA
 # -- Compiling architecture behavior of MIC_ULA
-# End time: 19:35:06 on Oct 28,2021, Elapsed time: 0:00:01
+# End time: 12:04:53 on Nov 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_BankRegisters.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:35:06 on Oct 28,2021
+# Start time: 12:04:53 on Nov 02,2021
 # vcom -reportprogress 300 -93 -work work C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_BankRegisters.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -34,11 +34,11 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity MIC_BankRegisters
 # -- Compiling architecture behavior of MIC_BankRegisters
-# End time: 19:35:06 on Oct 28,2021, Elapsed time: 0:00:00
+# End time: 12:04:54 on Nov 02,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:35:07 on Oct 28,2021
+# Start time: 12:04:54 on Nov 02,2021
 # vcom -reportprogress 300 -93 -work work C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -47,6 +47,46 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity PROJETO_MIC
 # -- Compiling architecture behavior of PROJETO_MIC
-# End time: 19:35:07 on Oct 28,2021, Elapsed time: 0:00:00
+# End time: 12:04:54 on Nov 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
+# vcom -93 -work work {C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:04:54 on Nov 02,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity testbench_MIC_AMUX_ALU
+# -- Compiling architecture tb_MIC of testbench_MIC_AMUX_ALU
+# End time: 12:04:55 on Nov 02,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench_MIC_AMUX_ALU
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" testbench_MIC_AMUX_ALU 
+# Start time: 12:04:55 on Nov 02,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.testbench_mic_amux_alu(tb_mic)
+# Loading work.projeto_mic(behavior)
+# Loading work.mic_bankregisters(behavior)
+# Loading ieee.std_logic_signed(body)
+# Loading work.mic_ula(behavior)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 800 ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_mic_amux_alu/MIC/MUX_ALU_DESLOCADOR
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_mic_amux_alu/MIC/MUX_ALU_DESLOCADOR
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 3  Instance: /testbench_mic_amux_alu/MIC/MUX_ALU_DESLOCADOR

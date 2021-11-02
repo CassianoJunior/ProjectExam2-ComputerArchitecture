@@ -1,5 +1,5 @@
-Analysis & Synthesis report for testbench_MIC_AMUX_ALU
-Thu Oct 21 20:12:16 2021
+Analysis & Elaboration report for testbench_MIC_AMUX_ALU
+Tue Nov 02 10:44:13 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,19 +7,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
 
 
 
@@ -43,31 +34,42 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Oct 21 20:12:16 2021       ;
-; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                   ; testbench_MIC_AMUX_ALU                      ;
-; Top-level Entity Name           ; PROJETO_MIC                                 ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 261                                         ;
-; Total pins                      ; 73                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Tue Nov 02 10:44:13 2021       ;
+; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                 ; testbench_MIC_AMUX_ALU                      ;
+; Top-level Entity Name         ; PROJETO_MIC                                 ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                                 ;
+; Analysis & Elaboration Settings                                                                                               ;
 +---------------------------------------------------------------------------------+--------------------+------------------------+
 ; Option                                                                          ; Setting            ; Default Value          ;
 +---------------------------------------------------------------------------------+--------------------+------------------------+
@@ -153,221 +155,24 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-+----------------------------+-------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                               ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
-; MIC_ULA.vhd                      ; yes             ; User VHDL File  ; C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_ULA.vhd           ;         ;
-; MIC_BankRegisters.vhd            ; yes             ; User VHDL File  ; C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_BankRegisters.vhd ;         ;
-; PROJETO_MIC.vhd                  ; yes             ; User VHDL File  ; C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd       ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 237       ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 270       ;
-;     -- 7 input functions                    ; 4         ;
-;     -- 6 input functions                    ; 131       ;
-;     -- 5 input functions                    ; 84        ;
-;     -- 4 input functions                    ; 45        ;
-;     -- <=3 input functions                  ; 6         ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 261       ;
-;                                             ;           ;
-; I/O pins                                    ; 73        ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 261       ;
-; Total fan-out                               ; 2630      ;
-; Average fan-out                             ; 3.88      ;
-+---------------------------------------------+-----------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                     ;
-+----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name       ; Library Name ;
-+----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-------------------+--------------+
-; |PROJETO_MIC                     ; 270 (0)             ; 261 (46)                  ; 0                 ; 0          ; 73   ; 0            ; |PROJETO_MIC                             ; PROJETO_MIC       ; work         ;
-;    |MIC_BankRegisters:Registers| ; 97 (97)             ; 215 (215)                 ; 0                 ; 0          ; 0    ; 0            ; |PROJETO_MIC|MIC_BankRegisters:Registers ; MIC_BankRegisters ; work         ;
-;    |MIC_ULA:MUX_ALU_DESLOCADOR|  ; 173 (173)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO_MIC|MIC_ULA:MUX_ALU_DESLOCADOR  ; MIC_ULA           ; work         ;
-+----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                        ;
-+--------------------------------------------------+----------------------------------------+
-; Register name                                    ; Reason for Removal                     ;
-+--------------------------------------------------+----------------------------------------+
-; MIC_BankRegisters:Registers|bankRegisters[7][15] ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[8][15] ; Stuck at GND due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[7][14] ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[8][14] ; Stuck at GND due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[7][13] ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[8][13] ; Stuck at GND due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[7][12] ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[8][12] ; Stuck at GND due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[7][11] ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[8][11] ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[7][10] ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[8][10] ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[7][9]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[8][9]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[7][8]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[8][8]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[7][7]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[8][7]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[9][7]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[7][6]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[8][6]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[9][6]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[7][5]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[8][5]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[9][5]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[7][4]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[8][4]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[9][4]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[7][3]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[8][3]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[9][3]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[7][2]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[8][2]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[9][2]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[7][1]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[8][1]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[9][1]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[7][0]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[8][0]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[9][0]  ; Stuck at VCC due to stuck port data_in ;
-; MIC_BankRegisters:Registers|bankRegisters[6][0]  ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 41           ;                                        ;
-+--------------------------------------------------+----------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                   ;
-+-------------------------------------------------+---------------------------+-------------------------------------------------+
-; Register name                                   ; Reason for Removal        ; Registers Removed due to This Register          ;
-+-------------------------------------------------+---------------------------+-------------------------------------------------+
-; MIC_BankRegisters:Registers|bankRegisters[7][1] ; Stuck at VCC              ; MIC_BankRegisters:Registers|bankRegisters[6][0] ;
-;                                                 ; due to stuck port data_in ;                                                 ;
-+-------------------------------------------------+---------------------------+-------------------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 261   ;
-; Number of registers using Synchronous Clear  ; 39    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 261   ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 259   ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |PROJETO_MIC|MIC_BankRegisters:Registers|bankRegisters[9][10] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |PROJETO_MIC|MIC_BankRegisters:Registers|bankRegisters[5][11] ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |PROJETO_MIC|MIC_BankRegisters:Registers|bankRegisters[6][8]  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |PROJETO_MIC|MIC_BankRegisters:Registers|bankRegisters[8][12] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |PROJETO_MIC|MIC_BankRegisters:Registers|bankRegisters[9][4]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |PROJETO_MIC|MIC_BankRegisters:Registers|bankRegisters[7][8]  ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PROJETO_MIC|MIC_BankRegisters:Registers|bankRegisters[8][4]  ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |PROJETO_MIC|MIC_ULA:MUX_ALU_DESLOCADOR|Mux7                  ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |PROJETO_MIC|MIC_ULA:MUX_ALU_DESLOCADOR|Mux24                 ;
-; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |PROJETO_MIC|MIC_BankRegisters:Registers|Mux22                ;
-; 17:1               ; 16 bits   ; 176 LEs       ; 176 LEs              ; 0 LEs                  ; No         ; |PROJETO_MIC|MIC_ULA:MUX_ALU_DESLOCADOR|Input_A[15]           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 261                         ;
-;     CLR               ; 2                           ;
-;     ENA CLR           ; 220                         ;
-;     ENA CLR SCLR      ; 39                          ;
-; arriav_lcell_comb     ; 270                         ;
-;     arith             ; 16                          ;
-;         4 data inputs ; 16                          ;
-;     extend            ; 4                           ;
-;         7 data inputs ; 4                           ;
-;     normal            ; 250                         ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 29                          ;
-;         5 data inputs ; 84                          ;
-;         6 data inputs ; 131                         ;
-; boundary_port         ; 73                          ;
-;                       ;                             ;
-; Max LUT depth         ; 6.70                        ;
-; Average LUT depth     ; 5.07                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:04     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Oct 21 20:11:39 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off testbench_MIC_AMUX_ALU -c testbench_MIC_AMUX_ALU
+    Info: Processing started: Tue Nov 02 10:43:51 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off testbench_MIC_AMUX_ALU -c testbench_MIC_AMUX_ALU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file testbench_mic_amux_alu.vhd
-    Info (12022): Found design unit 1: testbench_MIC_AMUX_ALU-tb_MIC File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd Line: 8
+    Info (12022): Found design unit 1: testbench_MIC_AMUX_ALU-tb_MIC File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd Line: 11
     Info (12023): Found entity 1: testbench_MIC_AMUX_ALU File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mic_ula.vhd
     Info (12022): Found design unit 1: MIC_ULA-behavior File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_ULA.vhd Line: 19
     Info (12023): Found entity 1: MIC_ULA File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_ULA.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mic_bankregisters.vhd
-    Info (12022): Found design unit 1: MIC_BankRegisters-behavior File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_BankRegisters.vhd Line: 20
+    Info (12022): Found design unit 1: MIC_BankRegisters-behavior File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_BankRegisters.vhd Line: 21
     Info (12023): Found entity 1: MIC_BankRegisters File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_BankRegisters.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file projeto_mic.vhd
     Info (12022): Found design unit 1: PROJETO_MIC-behavior File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd Line: 37
@@ -380,17 +185,10 @@ Warning (10492): VHDL Process Statement warning at PROJETO_MIC.vhd(155): signal 
 Warning (10492): VHDL Process Statement warning at PROJETO_MIC.vhd(166): signal "WR_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd Line: 166
 Info (12128): Elaborating entity "MIC_BankRegisters" for hierarchy "MIC_BankRegisters:Registers" File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd Line: 87
 Info (12128): Elaborating entity "MIC_ULA" for hierarchy "MIC_ULA:MUX_ALU_DESLOCADOR" File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd Line: 100
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 604 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 41 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 531 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4849 megabytes
-    Info: Processing ended: Thu Oct 21 20:12:16 2021
-    Info: Elapsed time: 00:00:37
-    Info: Total CPU time (on all processors): 00:00:55
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4839 megabytes
+    Info: Processing ended: Tue Nov 02 10:44:13 2021
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:40
 
 
