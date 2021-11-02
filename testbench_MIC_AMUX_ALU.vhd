@@ -310,7 +310,7 @@ TEST : PROCESS
 		Signal_DATA_OK <= '0';
 
 		wait for 40 ns;
-		-- MBR := k 0
+		-- MBR := k(0)
 		Signal_AMUX <= '0';
 		Signal_ALU  <= "10";
 		Signal_MBR  <= '1';
@@ -326,7 +326,7 @@ TEST : PROCESS
 		Signal_DATA_OK <= '0';
 
 		wait for 40 ns;
-		-- MBR := k 1
+		-- MBR := k(1)
 		Signal_AMUX <= '0';
 		Signal_ALU  <= "10";
 		Signal_MBR  <= '1';
@@ -342,7 +342,7 @@ TEST : PROCESS
 		Signal_DATA_OK <= '0';
 
 		wait for 40 ns;
-		-- MBR := k -1
+		-- MBR := k(-1)
 		Signal_AMUX <= '0';
 		Signal_ALU  <= "10";
 		Signal_MBR  <= '1';
@@ -358,7 +358,7 @@ TEST : PROCESS
 		Signal_DATA_OK <= '0';
 
 		wait for 40 ns;
-		-- MBR := k AM
+		-- MBR := k(AM)
 		Signal_AMUX <= '0';
 		Signal_ALU  <= "10";
 		Signal_MBR  <= '1';
@@ -374,7 +374,7 @@ TEST : PROCESS
 		Signal_DATA_OK <= '0';
 
 		wait for 40 ns;
-		-- MBR := k AM
+		-- MBR := k(SM)
 		Signal_AMUX <= '0';
 		Signal_ALU  <= "10";
 		Signal_MBR  <= '1';
@@ -385,6 +385,106 @@ TEST : PROCESS
 		Signal_C    <= "0000";
 		Signal_B    <= "0000";
 		Signal_A    <= "1001";
+		Signal_SH   <= "00";
+		Signal_MEM_TO_MBR <= "0000000000000000";
+		Signal_DATA_OK <= '0';
+		
+		wait for 40 ns;
+		-- MBR := NOT K(AM)
+		Signal_AMUX <= '0';
+		Signal_ALU  <= "11";
+		Signal_MBR  <= '1';
+		Signal_MAR  <= '0';
+		Signal_RD   <= '0';
+		Signal_WR   <= '0';
+		Signal_ENC  <= '0';
+		Signal_C    <= "0000";
+		Signal_B    <= "0000";
+		Signal_A    <= "1000";
+		Signal_SH   <= "00";
+		Signal_MEM_TO_MBR <= "0000000000000000";
+		Signal_DATA_OK <= '0';
+		
+		
+
+		wait for 40 ns;
+		-- MBR := K(1) AND K(-1)
+		Signal_AMUX <= '0';
+		Signal_ALU  <= "01";
+		Signal_MBR  <= '1';
+		Signal_MAR  <= '0';
+		Signal_RD   <= '0';
+		Signal_WR   <= '0';
+		Signal_ENC  <= '0';
+		Signal_C    <= "0000";
+		Signal_B    <= "0110";
+		Signal_A    <= "0111";
+		Signal_SH   <= "00";
+		Signal_MEM_TO_MBR <= "0000000000000000";
+		Signal_DATA_OK <= '0';
+
+		-- Executando ADDD X
+
+		wait for 40 ns;
+		-- MAR := IR;
+		Signal_AMUX <= '0';
+		Signal_ALU  <= "01";
+		Signal_MBR  <= '0';
+		Signal_MAR  <= '1';
+		Signal_RD   <= '1';
+		Signal_WR   <= '0';
+		Signal_ENC  <= '0';
+		Signal_C    <= "0000";
+		Signal_B    <= "0011";
+		Signal_A    <= "0111";
+		Signal_SH   <= "00";
+		Signal_MEM_TO_MBR <= "0000000000000000";
+		Signal_DATA_OK <= '0';
+
+		wait for 40 ns;
+		-- Dado da memória (0000000000000001) para o MBR
+		Signal_AMUX <= '0';
+		Signal_ALU  <= "01";
+		Signal_MBR  <= '0';
+		Signal_MAR  <= '0';
+		Signal_RD   <= '1';
+		Signal_WR   <= '0';
+		Signal_ENC  <= '0';
+		Signal_C    <= "0000";
+		Signal_B    <= "0011";
+		Signal_A    <= "0111";
+		Signal_SH   <= "00";
+		Signal_MEM_TO_MBR <= "0000000000000001";
+		Signal_DATA_OK <= '1';
+
+		wait for 40 ns;
+		-- AC := AC + MBR
+		Signal_AMUX <= '1';
+		Signal_ALU  <= "00";
+		Signal_MBR  <= '0';
+		Signal_MAR  <= '0';
+		Signal_RD   <= '0';
+		Signal_WR   <= '0';
+		Signal_ENC  <= '1';
+		Signal_C    <= "0001";
+		Signal_B    <= "0001";
+		Signal_A    <= "0111";
+		Signal_SH   <= "00";
+		Signal_MEM_TO_MBR <= "0000000000000000";
+		Signal_DATA_OK <= '0';
+
+		wait for 40 ns;
+		-- MBR := AC (ver na saída)
+		Signal_AMUX <= '0';
+		Signal_ALU  <= "10";
+		Signal_MBR  <= '1';
+		Signal_MAR  <= '0';
+		Signal_RD   <= '0';
+		Signal_WR   <= '0';
+		Signal_ENC  <= '0';
+		Signal_C    <= "0000";
+		Signal_B    <= "0001";
+		Signal_A    <= "0001";
 		Signal_SH   <= "00";
 		Signal_MEM_TO_MBR <= "0000000000000000";
 		Signal_DATA_OK <= '0';

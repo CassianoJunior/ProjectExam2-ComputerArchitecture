@@ -16,4 +16,4 @@ vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -
 add wave *
 view structure
 view signals
-run 800 ns
+run 2000 ns

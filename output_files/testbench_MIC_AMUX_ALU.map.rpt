@@ -1,5 +1,5 @@
 Analysis & Elaboration report for testbench_MIC_AMUX_ALU
-Tue Nov 02 10:44:13 2021
+Tue Nov 02 19:39:20 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue Nov 02 10:44:13 2021       ;
+; Analysis & Elaboration Status ; Successful - Tue Nov 02 19:39:20 2021       ;
 ; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                 ; testbench_MIC_AMUX_ALU                      ;
 ; Top-level Entity Name         ; PROJETO_MIC                                 ;
@@ -161,7 +161,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Nov 02 10:43:51 2021
+    Info: Processing started: Tue Nov 02 19:38:40 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off testbench_MIC_AMUX_ALU -c testbench_MIC_AMUX_ALU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -169,7 +169,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file testben
     Info (12022): Found design unit 1: testbench_MIC_AMUX_ALU-tb_MIC File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd Line: 11
     Info (12023): Found entity 1: testbench_MIC_AMUX_ALU File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mic_ula.vhd
-    Info (12022): Found design unit 1: MIC_ULA-behavior File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_ULA.vhd Line: 19
+    Info (12022): Found design unit 1: MIC_ULA-behavior File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_ULA.vhd Line: 20
     Info (12023): Found entity 1: MIC_ULA File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_ULA.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mic_bankregisters.vhd
     Info (12022): Found design unit 1: MIC_BankRegisters-behavior File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_BankRegisters.vhd Line: 21
@@ -186,9 +186,9 @@ Warning (10492): VHDL Process Statement warning at PROJETO_MIC.vhd(166): signal 
 Info (12128): Elaborating entity "MIC_BankRegisters" for hierarchy "MIC_BankRegisters:Registers" File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd Line: 87
 Info (12128): Elaborating entity "MIC_ULA" for hierarchy "MIC_ULA:MUX_ALU_DESLOCADOR" File: C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd Line: 100
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4839 megabytes
-    Info: Processing ended: Tue Nov 02 10:44:13 2021
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:40
+    Info: Peak virtual memory: 4842 megabytes
+    Info: Processing ended: Tue Nov 02 19:39:20 2021
+    Info: Elapsed time: 00:00:40
+    Info: Total CPU time (on all processors): 00:00:51
 
 

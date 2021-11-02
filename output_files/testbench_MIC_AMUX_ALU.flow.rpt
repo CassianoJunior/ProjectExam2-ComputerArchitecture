@@ -1,5 +1,5 @@
 Flow report for testbench_MIC_AMUX_ALU
-Tue Nov 02 10:44:13 2021
+Tue Nov 02 19:39:20 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Tue Nov 02 10:44:13 2021       ;
+; Flow Status                 ; Successful - Tue Nov 02 19:39:20 2021       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; testbench_MIC_AMUX_ALU                      ;
 ; Top-level Entity Name       ; PROJETO_MIC                                 ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+------------------------+
 ; Option            ; Setting                ;
 +-------------------+------------------------+
-; Start date & time ; 11/02/2021 10:43:52    ;
+; Start date & time ; 11/02/2021 19:38:41    ;
 ; Main task         ; Compilation            ;
 ; Revision Name     ; testbench_MIC_AMUX_ALU ;
 +-------------------+------------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+------------------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value          ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+------------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 2545305509594.163586063202244          ; --                     ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 2545305509594.163589272110716          ; --                     ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                     ; --          ; --             ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench_MIC_AMUX_ALU                 ; --                     ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --                     ; --          ; eda_simulation ;
@@ -83,7 +83,7 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_FILE                  ; testbench_MIC_AMUX_ALU.vhd             ; --                     ; --          ; --             ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; testbench_MIC_AMUX_ALU                 ; --                     ; --          ; --             ;
 ; EDA_TEST_BENCH_NAME                  ; testbench_MIC_AMUX_ALU                 ; --                     ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 200 ns                                 ; --                     ; --          ; --             ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 800 ns                                 ; --                     ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --                     ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --                     ; --          ; --             ;
 ; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --                     ; PROJETO_MIC ; Top            ;
@@ -101,8 +101,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:22     ; 1.0                     ; 4839 MB             ; 00:00:40                           ;
-; Total                  ; 00:00:22     ; --                      ; --                  ; 00:00:40                           ;
+; Analysis & Elaboration ; 00:00:40     ; 1.0                     ; 4842 MB             ; 00:00:51                           ;
+; Total                  ; 00:00:40     ; --                      ; --                  ; 00:00:51                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
