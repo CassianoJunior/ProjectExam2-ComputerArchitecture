@@ -311,51 +311,51 @@ TEST : PROCESS
 
 		wait for 40 ns;
 		-- MBR := k(0)
-		Signal_AMUX <= '0';
-		Signal_ALU  <= "10";
-		Signal_MBR  <= '1';
-		Signal_MAR  <= '0';
-		Signal_RD   <= '0';
-		Signal_WR   <= '0';
-		Signal_ENC  <= '0';
-		Signal_C    <= "0000";
-		Signal_B    <= "0000";
-		Signal_A    <= "0101";
-		Signal_SH   <= "00";
-		Signal_MEM_TO_MBR <= "0000000000000000";
-		Signal_DATA_OK <= '0';
+		Signal_AMUX <= '0'; --Seleciona a entrada A
+		Signal_ALU  <= "10"; --Realiza transparência de A
+		Signal_MBR  <= '1'; --Escreve em MBR
+		Signal_MAR  <= '0'; --Não importa
+		Signal_RD   <= '0'; --Não importa
+		Signal_WR   <= '0'; --Não importa
+		Signal_ENC  <= '0'; --Não escreve no Banco de Reg
+		Signal_C    <= "0000"; --Não importa
+		Signal_B    <= "0000"; --Não importa
+		Signal_A    <= "0101"; --Endereço da Constante 0
+		Signal_SH   <= "00"; --Não desloca
+		Signal_MEM_TO_MBR <= "0000000000000000"; --Não recebe valor da memória
+		Signal_DATA_OK <= '0'; --Não importa
 
 		wait for 40 ns;
 		-- MBR := k(1)
-		Signal_AMUX <= '0';
-		Signal_ALU  <= "10";
-		Signal_MBR  <= '1';
-		Signal_MAR  <= '0';
-		Signal_RD   <= '0';
-		Signal_WR   <= '0';
-		Signal_ENC  <= '0';
-		Signal_C    <= "0000";
-		Signal_B    <= "0000";
-		Signal_A    <= "0110";
-		Signal_SH   <= "00";
-		Signal_MEM_TO_MBR <= "0000000000000000";
-		Signal_DATA_OK <= '0';
+		Signal_AMUX <= '0'; --Seleciona a entrada A
+		Signal_ALU  <= "10"; --Realiza transparência de A
+		Signal_MBR  <= '1'; --Escreve em MBR
+		Signal_MAR  <= '0'; --Não importa
+		Signal_RD   <= '0'; --Não importa
+		Signal_WR   <= '0'; --Não importa
+		Signal_ENC  <= '0'; --Não escreve no Banco de Reg
+		Signal_C    <= "0000"; --Não importa
+		Signal_B    <= "0000"; --Não importa
+		Signal_A    <= "0110"; --Endereço da Constante 1
+		Signal_SH   <= "00"; --Não desloca
+		Signal_MEM_TO_MBR <= "0000000000000000"; --Não recebe valor da memória
+		Signal_DATA_OK <= '0'; --Não importa
 
 		wait for 40 ns;
 		-- MBR := k(-1)
-		Signal_AMUX <= '0';
-		Signal_ALU  <= "10";
-		Signal_MBR  <= '1';
-		Signal_MAR  <= '0';
-		Signal_RD   <= '0';
-		Signal_WR   <= '0';
-		Signal_ENC  <= '0';
-		Signal_C    <= "0000";
-		Signal_B    <= "0000";
-		Signal_A    <= "0111";
-		Signal_SH   <= "00";
-		Signal_MEM_TO_MBR <= "0000000000000000";
-		Signal_DATA_OK <= '0';
+		Signal_AMUX <= '0'; --Seleciona a entrada A
+		Signal_ALU  <= "10"; --Realiza transparência de A
+		Signal_MBR  <= '1'; --Escreve em MBR
+		Signal_MAR  <= '0'; --Não importa
+		Signal_RD   <= '0'; --Não importa
+		Signal_WR   <= '0'; --Não importa
+		Signal_ENC  <= '0'; --Não escreve no Banco de Reg
+		Signal_C    <= "0000"; --Não importa
+		Signal_B    <= "0000"; --Não importa
+		Signal_A    <= "0111"; --Endereço da Constante -1
+		Signal_SH   <= "00"; --Não desloca
+		Signal_MEM_TO_MBR <= "0000000000000000"; --Não recebe valor da memória
+		Signal_DATA_OK <= '0'; --Não importa
 
 		wait for 40 ns;
 		-- MBR := k(AM)
