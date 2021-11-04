@@ -16,6 +16,8 @@ ENTITY PROJETO_MIC IS
 			RD         : IN STD_LOGIC;
 			WR         : IN STD_LOGIC;
 			ENC        : IN STD_LOGIC;
+			CTRLA      : IN STD_LOGIC_LOGIC(2 DOWNTO 0);
+			CTRLB      : IN STD_LOGIC_LOGIC(2 DOWNTO 0);
 			C          : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 			B          : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 			A          : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -81,6 +83,11 @@ MAR_OUTPUT <= REG_MAR(11 DOWNTO 0);
 MBR_TO_MEM <= REG_MBR_OUT(15 DOWNTO 0);
 WR_OUTPUT <= WR_OUT; -- Conteúdo do registrador escrito na saída
 RD_OUTPUT <= RD_OUT; -- Conteúdo do registrador escrito na saída
+
+-- WITH CTRLA SELECT
+-- 	A <= A
+
+
 
 Registers: MIC_BankRegisters 
 	PORT MAP(

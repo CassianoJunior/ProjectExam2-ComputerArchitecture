@@ -8,6 +8,8 @@ entity MIC_BankRegisters is
     reset      : in std_logic;
     clk        : in std_logic;
     enc        : in std_logic;
+    CTRLA      : in std_logic_vector(1 DOWNTO 0);
+    CTRLB      : in std_logic_vector(1 DOWNTO 0);
     A_Address  : in std_logic_vector(3 DOWNTO 0);
     B_Address  : in std_logic_vector(3 DOWNTO 0);
     C_Address  : in std_logic_vector(3 DOWNTO 0);
@@ -65,5 +67,20 @@ begin
                 end if;
             end if;
         end process writeBankProcess;
+
+        PROCESS
+            begin
+                IF bankRegisters(3)(15 DOWNTO 8) = "11110111" OR bankRegisters(3)(11 DOWNTO 8) = "11111001" THEN
+                    WITH CTRLA SELECT
+                        A_Address <= bankRegisters(3)(7 DOWNTO 4) WHEN "01",
+                                     bankRegisters(3)(3 DOWNTO 0) WHEN "10",
+                                     A_Address WHEN OTHERS;
+
+                    WITH CTRLB SELECT
+                        B_Address <= bankRegisters(3)(7 DOWNTO 4) WHEN "01",
+                                     bankRegisters(3)(3 DOWNTO 0) WHEN "10",
+                                     B_Address WHEN OTHERS;
+                END IF;
+        END PROCESS;
 
 end behavior; -- arch
