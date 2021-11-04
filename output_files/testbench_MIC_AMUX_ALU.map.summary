@@ -1,12 +1,16 @@
-Analysis & Elaboration Status : Successful - Tue Nov 02 19:39:20 2021
+Analysis & Elaboration Status : Successful - Wed Nov 03 22:54:44 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : testbench_MIC_AMUX_ALU
 Top-level Entity Name : PROJETO_MIC
-Family : Cyclone V
-Logic utilization (in ALMs) : N/A until Partition Merge
+Family : MAX 10
+Total logic elements : N/A until Partition Merge
+    Total combinational functions : N/A until Partition Merge
+    Dedicated logic registers : N/A until Partition Merge
 Total registers : N/A until Partition Merge
 Total pins : N/A until Partition Merge
 Total virtual pins : N/A until Partition Merge
-Total block memory bits : N/A until Partition Merge
+Total memory bits : N/A until Partition Merge
+Embedded Multiplier 9-bit elements : N/A until Partition Merge
 Total PLLs : N/A until Partition Merge
-Total DLLs : N/A until Partition Merge
+UFM blocks : N/A until Partition Merge
+ADC blocks : N/A until Partition Merge

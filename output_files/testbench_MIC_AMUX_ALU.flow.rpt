@@ -1,5 +1,5 @@
 Flow report for testbench_MIC_AMUX_ALU
-Tue Nov 02 19:39:20 2021
+Wed Nov 03 22:54:44 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,24 +38,28 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------+
-; Flow Summary                                                              ;
-+-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Tue Nov 02 19:39:20 2021       ;
-; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name               ; testbench_MIC_AMUX_ALU                      ;
-; Top-level Entity Name       ; PROJETO_MIC                                 ;
-; Family                      ; Cyclone V                                   ;
-; Device                      ; 5CGXFC7C7F23C8                              ;
-; Timing Models               ; Final                                       ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Wed Nov 03 22:54:44 2021       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; testbench_MIC_AMUX_ALU                      ;
+; Top-level Entity Name              ; PROJETO_MIC                                 ;
+; Family                             ; MAX 10                                      ;
+; Device                             ; 10M08DAF484C8G                              ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
 
 
 +--------------------------------------------+
@@ -63,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+------------------------+
 ; Option            ; Setting                ;
 +-------------------+------------------------+
-; Start date & time ; 11/02/2021 19:38:41    ;
+; Start date & time ; 11/03/2021 22:54:27    ;
 ; Main task         ; Compilation            ;
 ; Revision Name     ; testbench_MIC_AMUX_ALU ;
 +-------------------+------------------------+
@@ -74,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+------------------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value          ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+------------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 2545305509594.163589272110716          ; --                     ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 2543529692222.163599086706668          ; --                     ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                     ; --          ; --             ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench_MIC_AMUX_ALU                 ; --                     ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --                     ; --          ; eda_simulation ;
@@ -83,7 +87,7 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_FILE                  ; testbench_MIC_AMUX_ALU.vhd             ; --                     ; --          ; --             ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; testbench_MIC_AMUX_ALU                 ; --                     ; --          ; --             ;
 ; EDA_TEST_BENCH_NAME                  ; testbench_MIC_AMUX_ALU                 ; --                     ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 800 ns                                 ; --                     ; --          ; --             ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 400 ns                                 ; --                     ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --                     ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --                     ; --          ; --             ;
 ; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --                     ; PROJETO_MIC ; Top            ;
@@ -101,8 +105,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:40     ; 1.0                     ; 4842 MB             ; 00:00:51                           ;
-; Total                  ; 00:00:40     ; --                      ; --                  ; 00:00:51                           ;
+; Analysis & Elaboration ; 00:00:18     ; 1.0                     ; 4767 MB             ; 00:00:40                           ;
+; Total                  ; 00:00:18     ; --                      ; --                  ; 00:00:40                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,7 +115,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+------------------+------------+------------+----------------+
 ; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +------------------------+------------------+------------+------------+----------------+
-; Analysis & Elaboration ; CASSIANO-JR      ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Elaboration ; DESKTOP-SKBL9MV  ; Windows 10 ; 10.0       ; x86_64         ;
 +------------------------+------------------+------------+------------+----------------+
 
 
