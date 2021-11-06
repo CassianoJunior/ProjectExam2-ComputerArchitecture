@@ -4,7 +4,8 @@ use ieee.std_logic_unsigned.all;
 
 ENTITY testbench_MIC_AMUX_ALU is
 	port(
-		SAIDA : OUT STD_LOGIC_VECTOR(15 downto 0)
+		SAIDA_MBR : OUT STD_LOGIC_VECTOR(15 downto 0);
+		SAIDA_Z: OUT STD_LOGIC
 	);
 END testbench_MIC_AMUX_ALU;
 
@@ -100,11 +101,11 @@ MIC : PROJETO_MIC
 		MEM_TO_MBR  => Signal_MEM_TO_MBR,
 		DATA_OK     => Signal_DATA_OK,
 		
-		MBR_TO_MEM  => SAIDA,
+		MBR_TO_MEM  => SAIDA_MBR,
 		MAR_OUTPUT  => Signal_MAR_OUTPUT,
 		RD_OUTPUT   => Signal_RD_OUTPUT,
 		WR_OUTPUT   => Signal_WR_OUTPUT,
-		Z           => Signal_Z,
+		Z           => SAIDA_Z,
 		N           => Signal_N
 	);
 
@@ -238,7 +239,7 @@ TEST : PROCESS
 		-- Signal_MEM_TO_MBR <= "0000000000000000";
 		-- Signal_DATA_OK    <= '0';
 
-		-- wait for 40 ns;
+		--wait for 40 ns;
 		
 		----------- A := A + 1 -------------
 		Signal_AMUX       <= '0';
@@ -255,7 +256,7 @@ TEST : PROCESS
 		Signal_A          <= "0110";
 		Signal_MEM_TO_MBR <= "0000000000000000";
 		Signal_DATA_OK    <= '0';
-		-------------------------------------
+		-- -------------------------------------
 
 		wait for 40 ns;
 		-- Colocando possivel instrucao em IR
@@ -484,7 +485,8 @@ TEST : PROCESS
 		Signal_DATA_OK    <= '0'; -- Nao importa
 
 		-- Execucao SLTAC
-		
+
+		wait for 40 ns;
 		-- Ciclo 1: AC := SLT(RA, RB);
 		Signal_AMUX       <= '0'; -- Seleciona Entrada A Amux
 		Signal_ALU        <= "0101"; -- SLT
@@ -515,6 +517,248 @@ TEST : PROCESS
 		Signal_C          <= "0001"; -- nao importa
 		Signal_B          <= "0000"; -- nao importa
 		Signal_A          <= "0001"; -- Endereco AC
+		Signal_MEM_TO_MBR <= "0000000000000000"; -- Nao importa
+		Signal_DATA_OK    <= '0'; -- Nao importa
+
+		-- Execucao SHTAC
+
+		wait for 40 ns;
+		-- Colocando possivel instrucao em IR
+		Signal_AMUX       <= '0'; 
+		Signal_ALU        <= "0010"; 
+		Signal_MBR        <= '1'; 
+		Signal_MAR        <= '0'; 
+		Signal_RD         <= '1';
+		Signal_WR         <= '0';
+		Signal_ENC        <= '0';
+		Signal_CTRLA      <= "00"; 
+		Signal_CTRLB      <= "00"; 
+		Signal_C          <= "0000";
+		Signal_B          <= "0000";
+		Signal_A          <= "0000";
+		Signal_MEM_TO_MBR <= "1111100110100101";
+		Signal_DATA_OK    <= '1';
+		
+		wait for 40 ns;
+
+		Signal_AMUX       <= '1';
+		Signal_ALU        <= "0010";
+		Signal_MBR        <= '0';
+		Signal_MAR        <= '0';
+		Signal_RD         <= '0';
+		Signal_WR         <= '0';
+		Signal_ENC        <= '1';
+		Signal_CTRLA      <= "00";
+		Signal_CTRLB      <= "00";
+		Signal_C          <= "0011";
+		Signal_B          <= "0000";
+		Signal_A          <= "0000";
+		Signal_MEM_TO_MBR <= "0000000000000000";
+		Signal_DATA_OK    <= '0';
+		
+		wait for 40 ns;
+
+		Signal_AMUX       <= '0';
+		Signal_ALU        <= "0010";
+		Signal_MBR        <= '1';
+		Signal_MAR        <= '0';
+		Signal_RD         <= '0';
+		Signal_WR         <= '0';
+		Signal_ENC        <= '0';
+		Signal_CTRLA      <= "00";
+		Signal_CTRLB      <= "00";
+		Signal_C          <= "0011";
+		Signal_B          <= "0000";
+		Signal_A          <= "0011";
+		Signal_MEM_TO_MBR <= "0000000000000000";
+		Signal_DATA_OK    <= '0';
+
+		wait for 40 ns;
+
+		-- Ciclo 1: alu := RA - RB;
+		Signal_AMUX       <= '0'; -- Escolhe entrada A amux
+		Signal_ALU        <= "0110"; -- Operacao Subtacao
+		Signal_MBR        <= '0'; -- Nao escreve em MBR
+		Signal_MAR        <= '0'; -- Nao escreve em MAR
+		Signal_RD         <= '0'; -- Nao le da memoria
+		Signal_WR         <= '0'; -- Nao escreve na memoria
+		Signal_ENC        <= '0'; -- Escreve no banco
+		Signal_CTRLA      <= "01"; -- Endereco RA
+		Signal_CTRLB      <= "10"; -- Endereco RB
+		Signal_C          <= "0001"; -- Nao importa
+		Signal_B          <= "0000"; -- Nao importa
+		Signal_A          <= "0001"; -- Nao importa
+		Signal_MEM_TO_MBR <= "0000000000000000"; -- Nao importa
+		Signal_DATA_OK    <= '0'; -- Nao importa
+
+		-- Ciclo 2: alu := SLT(RA, RB);
+		wait for 40 ns;
+		Signal_AMUX       <= '0'; -- Escolhe entrada A amux
+		Signal_ALU        <= "0101"; -- Operacao SLT
+		Signal_MBR        <= '0'; -- Nao escreve em MBR
+		Signal_MAR        <= '0'; -- Nao escreve em MAR
+		Signal_RD         <= '0'; -- Nao le da memoria
+		Signal_WR         <= '0'; -- Nao escreve na memoria
+		Signal_ENC        <= '0'; -- Escreve no banco
+		Signal_CTRLA      <= "01"; -- Endereco RA
+		Signal_CTRLB      <= "10"; -- Endereco RB
+		Signal_C          <= "0001"; -- Endereco AC
+		Signal_B          <= "0000"; -- Nao importa
+		Signal_A          <= "0001"; -- Nao importa
+		Signal_MEM_TO_MBR <= "0000000000000000"; -- Nao importa
+		Signal_DATA_OK    <= '0'; -- Nao importa
+
+		-- Ciclo 3: AC := 1;
+		wait for 40 ns;
+		Signal_AMUX       <= '0'; -- Escolhe entrada A amux
+		Signal_ALU        <= "1000"; -- Transparencia de A
+		Signal_MBR        <= '0'; -- Nao escreve em MBR
+		Signal_MAR        <= '0'; -- Nao escreve em MAR
+		Signal_RD         <= '0'; -- Nao le da memoria
+		Signal_WR         <= '0'; -- Nao escreve na memoria
+		Signal_ENC        <= '1'; -- Escreve no banco
+		Signal_CTRLA      <= "00"; -- Endereco A
+		Signal_CTRLB      <= "00"; -- Endereco B
+		Signal_C          <= "0001"; -- Endereco AC
+		Signal_B          <= "0000"; -- Nao importa
+		Signal_A          <= "0110"; -- Nao importa
+		Signal_MEM_TO_MBR <= "0000000000000000"; -- Nao importa
+		Signal_DATA_OK    <= '0'; -- Nao importa
+
+		wait for 40 ns;
+		-- Conferir dado em AC
+		Signal_AMUX       <= '0'; -- Escolhe entrada A amux
+		Signal_ALU        <= "0010"; -- Transparencia de A
+		Signal_MBR        <= '1'; -- escreve em MBR
+		Signal_MAR        <= '0'; -- Nao escreve em MAR
+		Signal_RD         <= '0'; -- Nao le da memoria
+		Signal_WR         <= '0'; -- NAo escreve na memoria
+		Signal_ENC        <= '0'; -- nao escreve no banco
+		Signal_CTRLA      <= "00"; -- Endereco A
+		Signal_CTRLB      <= "00"; -- nao importa
+		Signal_C          <= "0001"; -- nao importa
+		Signal_B          <= "0000"; -- nao importa
+		Signal_A          <= "0001"; -- Endereco AC
+		Signal_MEM_TO_MBR <= "0000000000000000"; -- Nao importa
+		Signal_DATA_OK    <= '0'; -- Nao importa
+
+		wait for 40 ns;
+		-- Colocando possivel instrucao em IR
+		Signal_AMUX       <= '0';
+		Signal_ALU        <= "0010";
+		Signal_MBR        <= '1';
+		Signal_MAR        <= '0';
+		Signal_RD         <= '1';
+		Signal_WR         <= '0';
+		Signal_ENC        <= '0';
+		Signal_CTRLA      <= "00";
+		Signal_CTRLB      <= "00";
+		Signal_C          <= "0000";
+		Signal_B          <= "0000";
+		Signal_A          <= "0000";
+		Signal_MEM_TO_MBR <= "1111100101011010";
+		Signal_DATA_OK    <= '1';
+		
+		wait for 40 ns;
+
+		Signal_AMUX       <= '1';
+		Signal_ALU        <= "0010";
+		Signal_MBR        <= '0';
+		Signal_MAR        <= '0';
+		Signal_RD         <= '0';
+		Signal_WR         <= '0';
+		Signal_ENC        <= '1';
+		Signal_CTRLA      <= "00";
+		Signal_CTRLB      <= "00";
+		Signal_C          <= "0011";
+		Signal_B          <= "0000";
+		Signal_A          <= "0000";
+		Signal_MEM_TO_MBR <= "0000000000000000";
+		Signal_DATA_OK    <= '0';
+		
+		wait for 40 ns;
+
+		Signal_AMUX       <= '0';
+		Signal_ALU        <= "0010";
+		Signal_MBR        <= '1';
+		Signal_MAR        <= '0';
+		Signal_RD         <= '0';
+		Signal_WR         <= '0';
+		Signal_ENC        <= '0';
+		Signal_CTRLA      <= "00";
+		Signal_CTRLB      <= "00";
+		Signal_C          <= "0011";
+		Signal_B          <= "0000";
+		Signal_A          <= "0011";
+		Signal_MEM_TO_MBR <= "0000000000000000";
+		Signal_DATA_OK    <= '0';
+
+		wait for 40 ns;
+
+		-- Ciclo 1: alu := RA - RB;
+		Signal_AMUX       <= '0'; -- Escolhe entrada A amux
+		Signal_ALU        <= "0110"; -- Operacao Subtacao
+		Signal_MBR        <= '0'; -- Nao escreve em MBR
+		Signal_MAR        <= '0'; -- Nao escreve em MAR
+		Signal_RD         <= '0'; -- Nao le da memoria
+		Signal_WR         <= '0'; -- Nao escreve na memoria
+		Signal_ENC        <= '0'; -- Escreve no banco
+		Signal_CTRLA      <= "01"; -- Endereco RA
+		Signal_CTRLB      <= "10"; -- Endereco RB
+		Signal_C          <= "0001"; -- Nao importa
+		Signal_B          <= "0000"; -- Nao importa
+		Signal_A          <= "0001"; -- Nao importa
+		Signal_MEM_TO_MBR <= "0000000000000000"; -- Nao importa
+		Signal_DATA_OK    <= '0'; -- Nao importa
+
+		-- Ciclo 2: alu := SLT(RA, RB);
+		wait for 40 ns;
+		Signal_AMUX       <= '0'; -- Escolhe entrada A amux
+		Signal_ALU        <= "0101"; -- Operacao SLT
+		Signal_MBR        <= '0'; -- Nao escreve em MBR
+		Signal_MAR        <= '0'; -- Nao escreve em MAR
+		Signal_RD         <= '0'; -- Nao le da memoria
+		Signal_WR         <= '0'; -- Nao escreve na memoria
+		Signal_ENC        <= '0'; -- Escreve no banco
+		Signal_CTRLA      <= "01"; -- Endereco RA
+		Signal_CTRLB      <= "10"; -- Endereco RB
+		Signal_C          <= "0001"; -- Endereco AC
+		Signal_B          <= "0000"; -- Nao importa
+		Signal_A          <= "0001"; -- Nao importa
+		Signal_MEM_TO_MBR <= "0000000000000000"; -- Nao importa
+		Signal_DATA_OK    <= '0'; -- Nao importa
+
+		-- Ciclo 3: PC := PC + 1;
+		wait for 40 ns;
+		Signal_AMUX       <= '0'; -- Escolhe a entrada A amux
+		Signal_ALU        <= "0000"; -- Operacao Soma
+		Signal_MBR        <= '0'; -- Nao escreve em MBR
+		Signal_MAR        <= '0'; -- Nao escreve em MAR
+		Signal_RD         <= '0'; -- Nao le da memoria
+		Signal_WR         <= '0'; -- Nao escreve na memoria
+		Signal_ENC        <= '1'; -- Escreve no banco
+		Signal_CTRLA      <= "00"; -- Endereco A
+		Signal_CTRLB      <= "00"; -- Endereco B
+		Signal_C          <= "0000"; -- Endereco de PC
+		Signal_B          <= "0110"; -- Endereco constante 1
+		Signal_A          <= "0000"; -- Endereco de PC
+		Signal_MEM_TO_MBR <= "0000000000000000"; -- Nao importa
+		Signal_DATA_OK    <= '0'; -- Nao importa
+
+		wait for 40 ns;
+		-- Conferir dado em PC
+		Signal_AMUX       <= '0'; -- Escolhe entrada A amux
+		Signal_ALU        <= "0010"; -- Transparencia de A
+		Signal_MBR        <= '1'; -- escreve em MBR
+		Signal_MAR        <= '0'; -- Nao escreve em MAR
+		Signal_RD         <= '0'; -- Nao le da memoria
+		Signal_WR         <= '0'; -- NAo escreve na memoria
+		Signal_ENC        <= '0'; -- nao escreve no banco
+		Signal_CTRLA      <= "00"; -- Endereco A
+		Signal_CTRLB      <= "00"; -- nao importa
+		Signal_C          <= "0001"; -- nao importa
+		Signal_B          <= "0000"; -- nao importa
+		Signal_A          <= "0000"; -- Endereco PC
 		Signal_MEM_TO_MBR <= "0000000000000000"; -- Nao importa
 		Signal_DATA_OK    <= '0'; -- Nao importa
 		
