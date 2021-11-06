@@ -132,19 +132,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "ALU[0]",
+					"name" : "CTRLB[0]",
 					"strict" : false
 				},
 				{
-					"name" : "ALU[1]",
-					"strict" : false
-				},
-				{
-					"name" : "AMUX",
-					"strict" : false
-				},
-				{
-					"name" : "B[2]",
+					"name" : "CTRLB[1]",
 					"strict" : false
 				},
 				{
@@ -156,11 +148,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "B[2]",
+					"strict" : false
+				},
+				{
 					"name" : "B[1]",
 					"strict" : false
 				},
 				{
-					"name" : "A[2]",
+					"name" : "CTRLA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CTRLA[1]",
 					"strict" : false
 				},
 				{
@@ -172,15 +172,31 @@
 					"strict" : false
 				},
 				{
+					"name" : "A[2]",
+					"strict" : false
+				},
+				{
 					"name" : "A[1]",
 					"strict" : false
 				},
 				{
-					"name" : "SH[1]",
+					"name" : "AMUX",
 					"strict" : false
 				},
 				{
-					"name" : "SH[0]",
+					"name" : "ALU[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU[2]",
 					"strict" : false
 				},
 				{
@@ -208,11 +224,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "MEM_TO_MBR[14]",
+					"name" : "ENC",
 					"strict" : false
 				},
 				{
-					"name" : "DATA_OK",
+					"name" : "C[0]",
 					"strict" : false
 				},
 				{
@@ -228,55 +244,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "ENC",
+					"name" : "MEM_TO_MBR[14]",
 					"strict" : false
 				},
 				{
-					"name" : "C[0]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_TO_MBR[15]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_TO_MBR[6]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_TO_MBR[7]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_TO_MBR[8]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_TO_MBR[9]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_TO_MBR[1]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_TO_MBR[0]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_TO_MBR[10]",
+					"name" : "DATA_OK",
 					"strict" : false
 				},
 				{
 					"name" : "MEM_TO_MBR[11]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_TO_MBR[2]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_TO_MBR[3]",
 					"strict" : false
 				},
 				{
@@ -288,11 +264,51 @@
 					"strict" : false
 				},
 				{
-					"name" : "MEM_TO_MBR[4]",
+					"name" : "MEM_TO_MBR[15]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_TO_MBR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_TO_MBR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_TO_MBR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_TO_MBR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_TO_MBR[6]",
 					"strict" : false
 				},
 				{
 					"name" : "MEM_TO_MBR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_TO_MBR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_TO_MBR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_TO_MBR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_TO_MBR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_TO_MBR[0]",
 					"strict" : false
 				}
 			]

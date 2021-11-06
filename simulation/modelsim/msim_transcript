@@ -7,13 +7,13 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying E:/VHDL/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/MIC_ULA.vhd}
+# vcom -93 -work work {C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_ULA.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:54:55 on Nov 03,2021
-# vcom -reportprogress 300 -93 -work work C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/MIC_ULA.vhd 
+# Start time: 21:39:17 on Nov 05,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_ULA.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -21,12 +21,12 @@
 # -- Loading package STD_LOGIC_SIGNED
 # -- Compiling entity MIC_ULA
 # -- Compiling architecture behavioral of MIC_ULA
-# End time: 22:54:55 on Nov 03,2021, Elapsed time: 0:00:00
+# End time: 21:39:17 on Nov 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/MIC_BankRegisters.vhd}
+# vcom -93 -work work {C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_BankRegisters.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:54:55 on Nov 03,2021
-# vcom -reportprogress 300 -93 -work work C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/MIC_BankRegisters.vhd 
+# Start time: 21:39:18 on Nov 05,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_BankRegisters.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -34,12 +34,12 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity MIC_BankRegisters
 # -- Compiling architecture behavior of MIC_BankRegisters
-# End time: 22:54:56 on Nov 03,2021, Elapsed time: 0:00:01
+# End time: 21:39:18 on Nov 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/PROJETO_MIC.vhd}
+# vcom -93 -work work {C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:54:56 on Nov 03,2021
-# vcom -reportprogress 300 -93 -work work C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/PROJETO_MIC.vhd 
+# Start time: 21:39:18 on Nov 05,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -47,13 +47,13 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity PROJETO_MIC
 # -- Compiling architecture behavior of PROJETO_MIC
-# End time: 22:54:56 on Nov 03,2021, Elapsed time: 0:00:00
+# End time: 21:39:19 on Nov 05,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/testbench_MIC_AMUX_ALU.vhd}
+# vcom -93 -work work {C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:54:56 on Nov 03,2021
-# vcom -reportprogress 300 -93 -work work C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/testbench_MIC_AMUX_ALU.vhd 
+# Start time: 21:39:19 on Nov 05,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -61,12 +61,12 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity testbench_MIC_AMUX_ALU
 # -- Compiling architecture tb_MIC of testbench_MIC_AMUX_ALU
-# End time: 22:54:56 on Nov 03,2021, Elapsed time: 0:00:00
+# End time: 21:39:20 on Nov 05,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  testbench_MIC_AMUX_ALU
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" testbench_MIC_AMUX_ALU 
-# Start time: 22:54:56 on Nov 03,2021
+# Start time: 21:39:20 on Nov 05,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -79,11 +79,16 @@
 # Loading work.mic_ula(behavioral)
 # 
 # add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: cassi  Hostname: CASSIANO-JR  ProcessID: 1652
+#           Attempting to use alternate WLF file "./wlft2gn6st".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft2gn6st
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 400 ns
+# run 800 ns
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /testbench_mic_amux_alu/MIC/MUX_ALU_DESLOCADOR
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
@@ -92,6 +97,14 @@
 #    Time: 0 ps  Iteration: 0  Instance: /testbench_mic_amux_alu/MIC/MUX_ALU_DESLOCADOR
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /testbench_mic_amux_alu/MIC/MUX_ALU_DESLOCADOR
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_mic_amux_alu/MIC/Registers
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_mic_amux_alu/MIC/Registers
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_mic_amux_alu/MIC/Registers
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_mic_amux_alu/MIC/Registers
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 1  Instance: /testbench_mic_amux_alu/MIC/MUX_ALU_DESLOCADOR
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
@@ -100,5 +113,3 @@
 #    Time: 10 ns  Iteration: 3  Instance: /testbench_mic_amux_alu/MIC/MUX_ALU_DESLOCADOR
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 10 ns  Iteration: 3  Instance: /testbench_mic_amux_alu/MIC/MUX_ALU_DESLOCADOR
-# End time: 22:55:29 on Nov 03,2021, Elapsed time: 0:00:33
-# Errors: 0, Warnings: 8

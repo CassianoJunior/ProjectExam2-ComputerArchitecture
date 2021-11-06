@@ -16,8 +16,8 @@ ENTITY PROJETO_MIC IS
 			RD         : IN STD_LOGIC;
 			WR         : IN STD_LOGIC;
 			ENC        : IN STD_LOGIC;
-			CTRLA      : IN STD_LOGIC_LOGIC(2 DOWNTO 0);
-			CTRLB      : IN STD_LOGIC_LOGIC(2 DOWNTO 0);
+			CTRLA      : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+			CTRLB      : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 			C          : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 			B          : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 			A          : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -51,6 +51,8 @@ COMPONENT MIC_BankRegisters
 		Reset     : IN std_logic;
 		Clk       : IN std_logic;
 		Enc       : IN std_logic;
+		CTRLA     : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		CTRLB     : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 		A_Address : IN std_logic_vector(3 DOWNTO 0);
 		B_Address : IN std_logic_vector(3 DOWNTO 0);
 		C_Address : IN std_logic_vector(3 DOWNTO 0);
@@ -64,14 +66,14 @@ end COMPONENT;
 
 COMPONENT MIC_ULA
 	port(
-		amux      : IN std_logic;
-		alu_sh    : IN std_logic_vector(3 downto 0);
-		A_Input   : IN std_logic_vector(15 DOWNTO 0);
-		B_Input   : IN std_logic_vector(15 DOWNTO 0);
-		MBR_Input : IN std_logic_vector(15 DOWNTO 0);
+		amux       : IN std_logic;
+		alu_sh     : IN std_logic_vector(3 downto 0);
+		A_Input    : IN std_logic_vector(15 DOWNTO 0);
+		B_Input    : IN std_logic_vector(15 DOWNTO 0);
+		MBR_Input  : IN std_logic_vector(15 DOWNTO 0);
 
-		N         : OUT std_logic;
-		Z         : OUT std_logic;
+		N          : OUT std_logic;
+		Z          : OUT std_logic;
 		ULA_Output : OUT std_logic_vector(15 DOWNTO 0)
 	);
 
@@ -84,16 +86,14 @@ MBR_TO_MEM <= REG_MBR_OUT(15 DOWNTO 0);
 WR_OUTPUT <= WR_OUT; -- Conteúdo do registrador escrito na saída
 RD_OUTPUT <= RD_OUT; -- Conteúdo do registrador escrito na saída
 
--- WITH CTRLA SELECT
--- 	A <= A
-
-
 
 Registers: MIC_BankRegisters 
 	PORT MAP(
 		Reset       => RESET,
 		Clk         => CLK,
 		Enc         => ENC,
+		CTRLA      	=> CTRLA,
+		CTRLB       => CTRLB,
 		A_Address   => A,
 		B_Address   => B,
 		C_Address   => C,

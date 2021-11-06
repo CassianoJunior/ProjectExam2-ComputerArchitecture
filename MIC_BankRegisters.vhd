@@ -26,10 +26,23 @@ TYPE BANKREG is array(0 to 15) of STD_LOGIC_VECTOR(15 DOWNTO 0);
 
 SIGNAL bankRegisters : BANKREG;
 
-begin
+SIGNAL RA_Address : std_logic_vector(3 DOWNTO 0);
+SIGNAL RB_Address : std_logic_vector(3 DOWNTO 0);
 
-    A_Output(15 DOWNTO 0) <= bankRegisters(conv_integer(A_Address(3 DOWNTO 0)))(15 DOWNTO 0);
-    B_Output(15 DOWNTO 0) <= bankRegisters(conv_integer(B_Address(3 DOWNTO 0)))(15 DOWNTO 0);
+BEGIN
+
+    WITH CTRLA SELECT
+        RA_Address <=   bankRegisters(3)(7 DOWNTO 4) WHEN "01",
+                        bankRegisters(3)(3 DOWNTO 0) WHEN "10",
+                        A_Address WHEN OTHERS;
+
+    WITH CTRLB SELECT
+        RB_Address <=   bankRegisters(3)(7 DOWNTO 4) WHEN "01",
+                        bankRegisters(3)(3 DOWNTO 0) WHEN "10",
+                        B_Address WHEN OTHERS;
+
+    A_Output(15 DOWNTO 0) <= bankRegisters(conv_integer(RA_Address(3 DOWNTO 0)))(15 DOWNTO 0);
+    B_Output(15 DOWNTO 0) <= bankRegisters(conv_integer(RB_Address(3 DOWNTO 0)))(15 DOWNTO 0);
 
     writeBankProcess : PROCESS(clk, enc, reset)
         begin
@@ -67,20 +80,5 @@ begin
                 end if;
             end if;
         end process writeBankProcess;
-
-        PROCESS
-            begin
-                IF bankRegisters(3)(15 DOWNTO 8) = "11110111" OR bankRegisters(3)(11 DOWNTO 8) = "11111001" THEN
-                    WITH CTRLA SELECT
-                        A_Address <= bankRegisters(3)(7 DOWNTO 4) WHEN "01",
-                                     bankRegisters(3)(3 DOWNTO 0) WHEN "10",
-                                     A_Address WHEN OTHERS;
-
-                    WITH CTRLB SELECT
-                        B_Address <= bankRegisters(3)(7 DOWNTO 4) WHEN "01",
-                                     bankRegisters(3)(3 DOWNTO 0) WHEN "10",
-                                     B_Address WHEN OTHERS;
-                END IF;
-        END PROCESS;
 
 end behavior; -- arch
