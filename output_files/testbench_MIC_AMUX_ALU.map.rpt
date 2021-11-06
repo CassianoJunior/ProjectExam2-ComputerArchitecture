@@ -1,5 +1,5 @@
 Analysis & Elaboration report for testbench_MIC_AMUX_ALU
-Sat Nov 06 12:11:12 2021
+Sat Nov 06 14:32:11 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sat Nov 06 12:11:12 2021       ;
+; Analysis & Elaboration Status      ; Successful - Sat Nov 06 14:32:11 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; testbench_MIC_AMUX_ALU                      ;
 ; Top-level Entity Name              ; PROJETO_MIC                                 ;
@@ -61,7 +61,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -164,50 +164,50 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Nov 06 12:11:00 2021
+    Info: Processing started: Sat Nov 06 14:31:59 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off testbench_MIC_AMUX_ALU -c testbench_MIC_AMUX_ALU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file testbench_mic_amux_alu.vhd
-    Info (12022): Found design unit 1: testbench_MIC_AMUX_ALU-tb_MIC File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/testbench_MIC_AMUX_ALU.vhd Line: 12
-    Info (12023): Found entity 1: testbench_MIC_AMUX_ALU File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/testbench_MIC_AMUX_ALU.vhd Line: 5
+    Info (12022): Found design unit 1: testbench_MIC_AMUX_ALU-tb_MIC File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/testbench_MIC_AMUX_ALU.vhd Line: 12
+    Info (12023): Found entity 1: testbench_MIC_AMUX_ALU File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/testbench_MIC_AMUX_ALU.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mic_ula.vhd
-    Info (12022): Found design unit 1: MIC_ULA-behavioral File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 43
-    Info (12023): Found entity 1: MIC_ULA File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 29
+    Info (12022): Found design unit 1: MIC_ULA-behavioral File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 43
+    Info (12023): Found entity 1: MIC_ULA File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 29
 Info (12021): Found 2 design units, including 1 entities, in source file mic_bankregisters.vhd
-    Info (12022): Found design unit 1: MIC_BankRegisters-behavior File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_BankRegisters.vhd Line: 23
-    Info (12023): Found entity 1: MIC_BankRegisters File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_BankRegisters.vhd Line: 6
+    Info (12022): Found design unit 1: MIC_BankRegisters-behavior File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_BankRegisters.vhd Line: 23
+    Info (12023): Found entity 1: MIC_BankRegisters File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_BankRegisters.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file projeto_mic.vhd
-    Info (12022): Found design unit 1: PROJETO_MIC-behavior File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd Line: 38
-    Info (12023): Found entity 1: PROJETO_MIC File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd Line: 8
+    Info (12022): Found design unit 1: PROJETO_MIC-behavior File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd Line: 38
+    Info (12023): Found entity 1: PROJETO_MIC File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd Line: 8
 Info (12127): Elaborating entity "PROJETO_MIC" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at PROJETO_MIC.vhd(124): signal "REG_MAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd Line: 124
-Warning (10492): VHDL Process Statement warning at PROJETO_MIC.vhd(135): signal "REG_MBR_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd Line: 135
-Warning (10492): VHDL Process Statement warning at PROJETO_MIC.vhd(147): signal "REG_MBR_IN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd Line: 147
-Warning (10492): VHDL Process Statement warning at PROJETO_MIC.vhd(159): signal "RD_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd Line: 159
-Warning (10492): VHDL Process Statement warning at PROJETO_MIC.vhd(170): signal "WR_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd Line: 170
-Info (12128): Elaborating entity "MIC_BankRegisters" for hierarchy "MIC_BankRegisters:Registers" File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd Line: 90
-Info (12128): Elaborating entity "MIC_ULA" for hierarchy "MIC_ULA:MUX_ALU_DESLOCADOR" File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd Line: 105
-Info (10041): Inferred latch for "SLT[0]" at MIC_ULA.vhd(65) File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
-Info (10041): Inferred latch for "SLT[1]" at MIC_ULA.vhd(65) File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
-Info (10041): Inferred latch for "SLT[2]" at MIC_ULA.vhd(65) File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
-Info (10041): Inferred latch for "SLT[3]" at MIC_ULA.vhd(65) File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
-Info (10041): Inferred latch for "SLT[4]" at MIC_ULA.vhd(65) File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
-Info (10041): Inferred latch for "SLT[5]" at MIC_ULA.vhd(65) File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
-Info (10041): Inferred latch for "SLT[6]" at MIC_ULA.vhd(65) File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
-Info (10041): Inferred latch for "SLT[7]" at MIC_ULA.vhd(65) File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
-Info (10041): Inferred latch for "SLT[8]" at MIC_ULA.vhd(65) File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
-Info (10041): Inferred latch for "SLT[9]" at MIC_ULA.vhd(65) File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
-Info (10041): Inferred latch for "SLT[10]" at MIC_ULA.vhd(65) File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
-Info (10041): Inferred latch for "SLT[11]" at MIC_ULA.vhd(65) File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
-Info (10041): Inferred latch for "SLT[12]" at MIC_ULA.vhd(65) File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
-Info (10041): Inferred latch for "SLT[13]" at MIC_ULA.vhd(65) File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
-Info (10041): Inferred latch for "SLT[14]" at MIC_ULA.vhd(65) File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
-Info (10041): Inferred latch for "SLT[15]" at MIC_ULA.vhd(65) File: C:/Users/Adm/Documents/UFPI/2021.1/Arquitetura de Computadores/avaliacao2/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
+Warning (10492): VHDL Process Statement warning at PROJETO_MIC.vhd(124): signal "REG_MAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd Line: 124
+Warning (10492): VHDL Process Statement warning at PROJETO_MIC.vhd(135): signal "REG_MBR_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd Line: 135
+Warning (10492): VHDL Process Statement warning at PROJETO_MIC.vhd(147): signal "REG_MBR_IN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd Line: 147
+Warning (10492): VHDL Process Statement warning at PROJETO_MIC.vhd(159): signal "RD_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd Line: 159
+Warning (10492): VHDL Process Statement warning at PROJETO_MIC.vhd(170): signal "WR_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd Line: 170
+Info (12128): Elaborating entity "MIC_BankRegisters" for hierarchy "MIC_BankRegisters:Registers" File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd Line: 90
+Info (12128): Elaborating entity "MIC_ULA" for hierarchy "MIC_ULA:MUX_ALU_DESLOCADOR" File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd Line: 105
+Info (10041): Inferred latch for "SLT[0]" at MIC_ULA.vhd(65) File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
+Info (10041): Inferred latch for "SLT[1]" at MIC_ULA.vhd(65) File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
+Info (10041): Inferred latch for "SLT[2]" at MIC_ULA.vhd(65) File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
+Info (10041): Inferred latch for "SLT[3]" at MIC_ULA.vhd(65) File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
+Info (10041): Inferred latch for "SLT[4]" at MIC_ULA.vhd(65) File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
+Info (10041): Inferred latch for "SLT[5]" at MIC_ULA.vhd(65) File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
+Info (10041): Inferred latch for "SLT[6]" at MIC_ULA.vhd(65) File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
+Info (10041): Inferred latch for "SLT[7]" at MIC_ULA.vhd(65) File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
+Info (10041): Inferred latch for "SLT[8]" at MIC_ULA.vhd(65) File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
+Info (10041): Inferred latch for "SLT[9]" at MIC_ULA.vhd(65) File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
+Info (10041): Inferred latch for "SLT[10]" at MIC_ULA.vhd(65) File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
+Info (10041): Inferred latch for "SLT[11]" at MIC_ULA.vhd(65) File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
+Info (10041): Inferred latch for "SLT[12]" at MIC_ULA.vhd(65) File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
+Info (10041): Inferred latch for "SLT[13]" at MIC_ULA.vhd(65) File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
+Info (10041): Inferred latch for "SLT[14]" at MIC_ULA.vhd(65) File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
+Info (10041): Inferred latch for "SLT[15]" at MIC_ULA.vhd(65) File: D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd Line: 65
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4769 megabytes
-    Info: Processing ended: Sat Nov 06 12:11:12 2021
+    Info: Peak virtual memory: 4775 megabytes
+    Info: Processing ended: Sat Nov 06 14:32:11 2021
     Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Total CPU time (on all processors): 00:00:22
 
 
