@@ -483,6 +483,40 @@ TEST : PROCESS
 		Signal_MEM_TO_MBR <= "0000000000000000"; -- Nao importa
 		Signal_DATA_OK    <= '0'; -- Nao importa
 
+		-- Execucao SLTAC
+		
+		-- Ciclo 1: AC := SLT(RA, RB);
+		Signal_AMUX       <= '0'; -- Seleciona Entrada A Amux
+		Signal_ALU        <= "0101"; -- SLT
+		Signal_MBR        <= '0'; -- nao escreve em MBR
+		Signal_MAR        <= '0'; -- Nao escreve em MAR
+		Signal_RD         <= '0'; -- Nao ler da memoria
+		Signal_WR         <= '0'; -- NAo escreve na memoria
+		Signal_ENC        <= '1'; -- Escreve no Banco
+		Signal_CTRLA      <= "01"; -- Endereco RA
+		Signal_CTRLB      <= "10"; -- Endereco RB
+		Signal_C          <= "0001"; -- Endereco AC
+		Signal_B          <= "0000"; -- Nao importa
+		Signal_A          <= "0010"; -- Nao importa
+		Signal_MEM_TO_MBR <= "0000000000000000"; -- Nao importa
+		Signal_DATA_OK    <= '0'; -- Nao importa
+		
+		wait for 40 ns;
+		-- Conferir dado em AC
+		Signal_AMUX       <= '0'; -- Escolhe entrada A amux
+		Signal_ALU        <= "0010"; -- Transparencia de A
+		Signal_MBR        <= '1'; -- escreve em MBR
+		Signal_MAR        <= '0'; -- Nao escreve em MAR
+		Signal_RD         <= '0'; -- Nao le da memoria
+		Signal_WR         <= '0'; -- NAo escreve na memoria
+		Signal_ENC        <= '0'; -- nao escreve no banco
+		Signal_CTRLA      <= "00"; -- Endereco A
+		Signal_CTRLB      <= "00"; -- nao importa
+		Signal_C          <= "0001"; -- nao importa
+		Signal_B          <= "0000"; -- nao importa
+		Signal_A          <= "0001"; -- Endereco AC
+		Signal_MEM_TO_MBR <= "0000000000000000"; -- Nao importa
+		Signal_DATA_OK    <= '0'; -- Nao importa
 		
 		
 		wait;
