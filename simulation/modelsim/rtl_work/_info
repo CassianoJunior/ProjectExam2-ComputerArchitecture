@@ -25,9 +25,9 @@ VKOTB2jkA]Xfnia=`98jl@3
 !s100 BoSS>Kg?XfVV8A>^mEzCo1
 Z8 OV;C;2020.1;71
 31
-Z9 !s110 1636377607
+Z9 !s110 1636398090
 !i10b 1
-Z10 !s108 1636377607.000000
+Z10 !s108 1636398089.000000
 Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/MIC_BankRegisters.vhd|
 Z12 !s107 C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/MIC_BankRegisters.vhd|
 !i113 1
@@ -70,11 +70,11 @@ VG4CHn7BiJTk6k5TXZ9g_k2
 !s100 E[QUj?dCEac=?l9Z`;IOO3
 R8
 31
-R9
+Z19 !s110 1636398089
 !i10b 1
 R10
-Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/MIC_ULA.vhd|
-Z20 !s107 C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/MIC_ULA.vhd|
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/MIC_ULA.vhd|
+Z21 !s107 C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/MIC_ULA.vhd|
 !i113 1
 R13
 R14
@@ -91,11 +91,11 @@ V6NIAP<XcT2o:lEom3NX=E3
 !s100 hRPle]=S@elPjhha>H5^^3
 R8
 31
-R9
+R19
 !i10b 1
 R10
-R19
 R20
+R21
 !i113 1
 R13
 R14
@@ -107,8 +107,8 @@ R4
 R5
 !i122 2
 R0
-Z21 8C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/PROJETO_MIC.vhd
-Z22 FC:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/PROJETO_MIC.vhd
+Z22 8C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/PROJETO_MIC.vhd
+Z23 FC:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/PROJETO_MIC.vhd
 l0
 L8 1
 V>38BEO]Pked7=nnHT=QQ20
@@ -117,9 +117,9 @@ R8
 31
 R9
 !i10b 1
-R10
-Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/PROJETO_MIC.vhd|
-Z24 !s107 C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/PROJETO_MIC.vhd|
+Z24 !s108 1636398090.000000
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/PROJETO_MIC.vhd|
+Z26 !s107 C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/PROJETO_MIC.vhd|
 !i113 1
 R13
 R14
@@ -138,32 +138,32 @@ R8
 31
 R9
 !i10b 1
-R10
-R23
 R24
+R25
+R26
 !i113 1
 R13
 R14
 Etestbench_mic_amux_alu
-Z25 w1636377566
+Z27 w1636398025
 R2
 R3
 R4
 R5
 !i122 3
 R0
-Z26 8C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/testbench_MIC_AMUX_ALU.vhd
-Z27 FC:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/testbench_MIC_AMUX_ALU.vhd
+Z28 8C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/testbench_MIC_AMUX_ALU.vhd
+Z29 FC:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/testbench_MIC_AMUX_ALU.vhd
 l0
 L5 1
 VCddPzK2;923Z?oMe3S]]13
 !s100 XP]Q36[MKa8d:ZlJM>RHe0
 R8
 31
-Z28 !s110 1636377608
+R9
 !i10b 1
-R10
-Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/testbench_MIC_AMUX_ALU.vhd|
+R24
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/testbench_MIC_AMUX_ALU.vhd|
 !s107 C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/testbench_MIC_AMUX_ALU.vhd|
 !i113 1
 R13
@@ -176,16 +176,16 @@ R5
 DEx4 work 22 testbench_mic_amux_alu 0 22 CddPzK2;923Z?oMe3S]]13
 !i122 3
 l82
-L11 658
-VD0jHQb0LCdZE9H_ohEZZa0
-!s100 g5fXR;9Dn;YeN_L@X_2481
+L11 1160
+V6dMzQfLXeL9SQT>ERVl002
+!s100 568@X_Gc;fo>@]>;Y_29k0
 R8
 31
-R28
+R9
 !i10b 1
-R10
-R29
-Z30 !s107 C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/testbench_MIC_AMUX_ALU.vhd|
+R24
+R30
+Z31 !s107 C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/testbench_MIC_AMUX_ALU.vhd|
 !i113 1
 R13
 R14
