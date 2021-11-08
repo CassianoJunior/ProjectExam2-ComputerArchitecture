@@ -8,28 +8,28 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/simulation/modelsim
+Z0 dC:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/simulation/modelsim
 Emic_bankregisters
-Z1 w1636161851
+Z1 w1636159532
 Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 1
 R0
-Z6 8C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/MIC_BankRegisters.vhd
-Z7 FC:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/MIC_BankRegisters.vhd
+Z6 8C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_BankRegisters.vhd
+Z7 FC:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_BankRegisters.vhd
 l0
 L6 1
 VKOTB2jkA]Xfnia=`98jl@3
 !s100 BoSS>Kg?XfVV8A>^mEzCo1
 Z8 OV;C;2020.1;71
 31
-Z9 !s110 1636377607
+Z9 !s110 1636394578
 !i10b 1
-Z10 !s108 1636377607.000000
-Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/MIC_BankRegisters.vhd|
-Z12 !s107 C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/MIC_BankRegisters.vhd|
+Z10 !s108 1636394578.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_BankRegisters.vhd|
+Z12 !s107 C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_BankRegisters.vhd|
 !i113 1
 Z13 o-93 -work work
 Z14 tExplicit 1 CvgOpt 0
@@ -55,15 +55,15 @@ R12
 R13
 R14
 Emic_ula
-Z15 w1636070271
+R1
 R2
-Z16 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+Z15 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
 R4
 R5
 !i122 0
 R0
-Z17 8C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/MIC_ULA.vhd
-Z18 FC:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/MIC_ULA.vhd
+Z16 8C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_ULA.vhd
+Z17 FC:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_ULA.vhd
 l0
 L29 1
 VG4CHn7BiJTk6k5TXZ9g_k2
@@ -72,15 +72,15 @@ R8
 31
 R9
 !i10b 1
-R10
-Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/MIC_ULA.vhd|
-Z20 !s107 C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/MIC_ULA.vhd|
+Z18 !s108 1636394577.000000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_ULA.vhd|
+Z20 !s107 C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/MIC_ULA.vhd|
 !i113 1
 R13
 R14
 Abehavioral
 R2
-R16
+R15
 R4
 R5
 DEx4 work 7 mic_ula 0 22 G4CHn7BiJTk6k5TXZ9g_k2
@@ -93,7 +93,7 @@ R8
 31
 R9
 !i10b 1
-R10
+R18
 R19
 R20
 !i113 1
@@ -107,19 +107,19 @@ R4
 R5
 !i122 2
 R0
-Z21 8C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/PROJETO_MIC.vhd
-Z22 FC:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/PROJETO_MIC.vhd
+Z21 8C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd
+Z22 FC:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd
 l0
 L8 1
 V>38BEO]Pked7=nnHT=QQ20
 !s100 0Q2MBo@He4YWzz1MPT=CX2
 R8
 31
-R9
+Z23 !s110 1636394579
 !i10b 1
 R10
-Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/PROJETO_MIC.vhd|
-Z24 !s107 C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/PROJETO_MIC.vhd|
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd|
+Z25 !s107 C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/PROJETO_MIC.vhd|
 !i113 1
 R13
 R14
@@ -136,35 +136,35 @@ V`2T7L<NRPlTbIz9Kl@^fZ2
 !s100 T=iK6BG7MdGobcX@HnThP0
 R8
 31
-R9
+R23
 !i10b 1
 R10
-R23
 R24
+R25
 !i113 1
 R13
 R14
 Etestbench_mic_amux_alu
-Z25 w1636377566
+Z26 w1636394079
 R2
 R3
 R4
 R5
 !i122 3
 R0
-Z26 8C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/testbench_MIC_AMUX_ALU.vhd
-Z27 FC:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/testbench_MIC_AMUX_ALU.vhd
+Z27 8C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd
+Z28 FC:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd
 l0
 L5 1
 VCddPzK2;923Z?oMe3S]]13
 !s100 XP]Q36[MKa8d:ZlJM>RHe0
 R8
 31
-Z28 !s110 1636377608
+R23
 !i10b 1
-R10
-Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/testbench_MIC_AMUX_ALU.vhd|
-!s107 C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/testbench_MIC_AMUX_ALU.vhd|
+Z29 !s108 1636394579.000000
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd|
+!s107 C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd|
 !i113 1
 R13
 R14
@@ -181,11 +181,11 @@ VD0jHQb0LCdZE9H_ohEZZa0
 !s100 g5fXR;9Dn;YeN_L@X_2481
 R8
 31
-R28
+R23
 !i10b 1
-R10
 R29
-Z30 !s107 C:/Users/jose1/Downloads/ProjetoProva2-ArqComputadores-main/testbench_MIC_AMUX_ALU.vhd|
+R30
+Z31 !s107 C:/Users/cassi/OneDrive/Documents/UFPI/Disciplinas/3P/ArquiteturaDeComputadores/VHDL/Programs/prova2/testbench_MIC_AMUX_ALU.vhd|
 !i113 1
 R13
 R14
