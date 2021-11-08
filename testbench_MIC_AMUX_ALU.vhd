@@ -777,7 +777,7 @@ TEST : PROCESS
 		Signal_C          <= "0000";
 		Signal_B          <= "0000";
 		Signal_A          <= "0000";
-		Signal_MEM_TO_MBR <= "1111000110100010";
+		Signal_MEM_TO_MBR <= "1111010100100010";
 		Signal_DATA_OK    <= '1';
 		
 		wait for 40 ns;
@@ -879,7 +879,7 @@ TEST : PROCESS
 		-- Signal_C          <= "0000";
 		-- Signal_B          <= "0000";
 		-- Signal_A          <= "0000";
-		-- Signal_MEM_TO_MBR <= "1111000110100010";
+		-- Signal_MEM_TO_MBR <= "1111010100100011";
 		-- Signal_DATA_OK    <= '1';
 		
 		-- wait for 40 ns;
