@@ -25,9 +25,9 @@ VKOTB2jkA]Xfnia=`98jl@3
 !s100 BoSS>Kg?XfVV8A>^mEzCo1
 Z8 OV;C;2020.1;71
 31
-Z9 !s110 1636220087
+Z9 !s110 1636377417
 !i10b 1
-Z10 !s108 1636220087.000000
+Z10 !s108 1636377417.000000
 Z11 !s90 -reportprogress|300|-93|-work|work|D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_BankRegisters.vhd|
 Z12 !s107 D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_BankRegisters.vhd|
 !i113 1
@@ -70,11 +70,11 @@ VG4CHn7BiJTk6k5TXZ9g_k2
 !s100 E[QUj?dCEac=?l9Z`;IOO3
 R8
 31
-Z18 !s110 1636220086
+R9
 !i10b 1
-Z19 !s108 1636220086.000000
-Z20 !s90 -reportprogress|300|-93|-work|work|D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd|
-Z21 !s107 D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd|
+R10
+Z18 !s90 -reportprogress|300|-93|-work|work|D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd|
+Z19 !s107 D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/MIC_ULA.vhd|
 !i113 1
 R13
 R14
@@ -91,11 +91,11 @@ V6NIAP<XcT2o:lEom3NX=E3
 !s100 hRPle]=S@elPjhha>H5^^3
 R8
 31
-R18
+R9
 !i10b 1
+R10
+R18
 R19
-R20
-R21
 !i113 1
 R13
 R14
@@ -107,17 +107,17 @@ R4
 R5
 !i122 2
 R0
-Z22 8D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd
-Z23 FD:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd
+Z20 8D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd
+Z21 FD:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd
 l0
 L8 1
 V>38BEO]Pked7=nnHT=QQ20
 !s100 0Q2MBo@He4YWzz1MPT=CX2
 R8
 31
-R9
+Z22 !s110 1636377418
 !i10b 1
-R10
+Z23 !s108 1636377418.000000
 Z24 !s90 -reportprogress|300|-93|-work|work|D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd|
 Z25 !s107 D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/PROJETO_MIC.vhd|
 !i113 1
@@ -136,16 +136,16 @@ V`2T7L<NRPlTbIz9Kl@^fZ2
 !s100 T=iK6BG7MdGobcX@HnThP0
 R8
 31
-R9
+R22
 !i10b 1
-R10
+R23
 R24
 R25
 !i113 1
 R13
 R14
 Etestbench_mic_amux_alu
-Z26 w1636220042
+Z26 w1636377398
 R2
 R3
 R4
@@ -160,9 +160,9 @@ VD7O9SJXHSo[LFEKSC<B;z1
 !s100 6GU=Ba>O`k]c^4O17UFah0
 R8
 31
-R9
+R22
 !i10b 1
-R10
+R23
 Z29 !s90 -reportprogress|300|-93|-work|work|D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/testbench_MIC_AMUX_ALU.vhd|
 !s107 D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/testbench_MIC_AMUX_ALU.vhd|
 !i113 1
@@ -176,14 +176,14 @@ R5
 DEx4 work 22 testbench_mic_amux_alu 0 22 D7O9SJXHSo[LFEKSC<B;z1
 !i122 3
 l83
-L12 861
-VMnVn1@ibYI_LgFl084b^m2
-!s100 gl;=SPR_?Y?KlMkJWC5=`2
+L12 963
+VnSSPXXC=@9Mf0:?ISWTUI2
+!s100 >d>`SklX4goIoKH4;kYTH3
 R8
 31
-R9
+R22
 !i10b 1
-R10
+R23
 R29
 Z30 !s107 D:/Programas/QuartusPrime/Projetos/ProjetoProva2-ArqComputadores/testbench_MIC_AMUX_ALU.vhd|
 !i113 1
