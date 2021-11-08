@@ -935,19 +935,19 @@ TEST : PROCESS
 		Signal_DATA_OK    <= '0'; -- Nao importa
 
 		wait for 40 ns;
-		--Ciclo 2: PC := 0;
-		Signal_AMUX       <= '0'; -- Escolhe entrada A amux
-		Signal_ALU        <= "0010"; -- transparencia
-		Signal_MBR        <= '0'; -- nao escreve em MBR
+		--Ciclo 2: PC := PC + 1;
+		Signal_AMUX       <= '0'; -- Escolhe a entrada A amux
+		Signal_ALU        <= "0000"; -- Operacao Soma
+		Signal_MBR        <= '0'; -- Nao escreve em MBR
 		Signal_MAR        <= '0'; -- Nao escreve em MAR
-		Signal_RD         <= '0'; -- Nao ler da memoria
-		Signal_WR         <= '0'; -- NAo escreve na memoria
-		Signal_ENC        <= '1'; -- escreve no banco
-		Signal_CTRLA      <= "00"; -- endereço A
-		Signal_CTRLB      <= "00"; -- endereço B
-		Signal_C          <= "0000"; -- endereço PC
-		Signal_B          <= "0000"; -- nao importa
-		Signal_A          <= "0101"; -- endereco constante 0
+		Signal_RD         <= '0'; -- Nao le da memoria
+		Signal_WR         <= '0'; -- Nao escreve na memoria
+		Signal_ENC        <= '1'; -- Escreve no banco
+		Signal_CTRLA      <= "00"; -- Endereco A
+		Signal_CTRLB      <= "00"; -- Endereco B
+		Signal_C          <= "0000"; -- Endereco de PC
+		Signal_B          <= "0110"; -- Endereco constante 1
+		Signal_A          <= "0000"; -- Endereco de PC
 		Signal_MEM_TO_MBR <= "0000000000000000"; -- Nao importa
 		Signal_DATA_OK    <= '0'; -- Nao importa
 
