@@ -436,7 +436,7 @@ TEST : PROCESS
 		Signal_AMUX       <= '0';
 		Signal_ALU        <= "0010";
 		Signal_MBR        <= '1';
-		Signal_MAR        <= '0';
+		Signal_MAR        <= '1'; -- Apenas para o MAR voltar para 0 para ver a mudanca nas ondas
 		Signal_RD         <= '0';
 		Signal_WR         <= '0';
 		Signal_ENC        <= '0';
