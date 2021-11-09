@@ -4,7 +4,8 @@ use ieee.std_logic_unsigned.all;
 
 ENTITY testbench_MIC_AMUX_ALU is
 	port(
-		SAIDA : OUT STD_LOGIC_VECTOR(15 downto 0)
+		SAIDA_MBR : OUT STD_LOGIC_VECTOR(15 downto 0);
+		SAIDA_MAR : OUT STD_LOGIC_VECTOR(11 downto 0)
 	);
 END testbench_MIC_AMUX_ALU;
 
@@ -100,8 +101,8 @@ MIC : PROJETO_MIC
 		MEM_TO_MBR  => Signal_MEM_TO_MBR,
 		DATA_OK     => Signal_DATA_OK,
 		
-		MBR_TO_MEM  => SAIDA,
-		MAR_OUTPUT  => Signal_MAR_OUTPUT,
+		MBR_TO_MEM  => SAIDA_MBR,
+		MAR_OUTPUT  => SAIDA_MAR,
 		RD_OUTPUT   => Signal_RD_OUTPUT,
 		WR_OUTPUT   => Signal_WR_OUTPUT,
 		Z           => Signal_Z,
@@ -271,7 +272,7 @@ TEST : PROCESS
 		Signal_C          <= "0000"; --Nao importa
 		Signal_B          <= "0000"; --Nao importa
 		Signal_A          <= "0000"; --Nao importa
-		Signal_MEM_TO_MBR <= "1111000110100010"; --Pega da memoria e bota em MBR
+		Signal_MEM_TO_MBR <= "1111000100101010"; --Pega da memoria e bota em MBR
 		Signal_DATA_OK    <= '1'; --Indica que o dado esta disponivel
 		
 		wait for 40 ns;
@@ -362,6 +363,7 @@ TEST : PROCESS
 		Signal_DATA_OK    <= '1'; -- Data no mbr
 		
 		wait for 40 ns;
+		-- Considerando RA como SP = 0 e MBR dado 6 recebido da memoria
 		-- Ciclo 4: AC := RA + MBR;
 		Signal_AMUX       <= '1'; -- Escolhe MBR no amux
 		Signal_ALU        <= "0000"; -- Soma
@@ -409,7 +411,7 @@ TEST : PROCESS
 		Signal_C          <= "0000";
 		Signal_B          <= "0000";
 		Signal_A          <= "0000";
-		Signal_MEM_TO_MBR <= "1111001110100010";
+		Signal_MEM_TO_MBR <= "1111001101101010";
 		Signal_DATA_OK    <= '1';
 		
 		wait for 40 ns;
@@ -484,7 +486,7 @@ TEST : PROCESS
 		Signal_DATA_OK    <= '0'; -- Nao importa
 		
 		wait for 40 ns;
-		-- Ciclo 3: RD; Recebe valor (6) da memoria e bota em MBR
+		-- Ciclo 3: RD; Recebe valor (1) da memoria e bota em MBR
 		Signal_AMUX       <= '0'; -- Nao importa
 		Signal_ALU        <= "0000"; -- Nao importa
 		Signal_MBR        <= '0'; -- nao escreve em MBR a partir do C_BUS
@@ -497,10 +499,11 @@ TEST : PROCESS
 		Signal_C          <= "0001"; -- Nao Importa
 		Signal_B          <= "0001"; -- nao importa
 		Signal_A          <= "0010"; -- Nao importa
-		Signal_MEM_TO_MBR <= "0000000000000110"; -- dado mem
+		Signal_MEM_TO_MBR <= "0000000000000001"; -- dado mem
 		Signal_DATA_OK    <= '1'; -- Data no mbr
 		
 		wait for 40 ns;
+		-- Considerando RA = k(1) e MBR dado 1 recebido da memoria
 		-- Ciclo 4: AC := RA - MBR;
 		Signal_AMUX       <= '1'; -- Escolhe MBR no amux
 		Signal_ALU        <= "0110"; -- Subtracao

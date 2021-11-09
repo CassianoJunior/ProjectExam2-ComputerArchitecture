@@ -1,5 +1,5 @@
 Flow report for testbench_MIC_AMUX_ALU
-Mon Nov 08 17:01:39 2021
+Tue Nov 09 11:14:54 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov 08 17:01:39 2021       ;
+; Flow Status                        ; Successful - Tue Nov 09 11:14:54 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; testbench_MIC_AMUX_ALU                      ;
 ; Top-level Entity Name              ; PROJETO_MIC                                 ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+------------------------+
 ; Option            ; Setting                ;
 +-------------------+------------------------+
-; Start date & time ; 11/08/2021 17:01:19    ;
+; Start date & time ; 11/09/2021 11:14:24    ;
 ; Main task         ; Compilation            ;
 ; Revision Name     ; testbench_MIC_AMUX_ALU ;
 +-------------------+------------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+------------------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value          ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+------------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 2543529692222.163640167906868          ; --                     ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 2543529692222.163646726306660          ; --                     ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                     ; --          ; --             ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench_MIC_AMUX_ALU                 ; --                     ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --                     ; --          ; eda_simulation ;
@@ -105,8 +105,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:21     ; 1.0                     ; 4774 MB             ; 00:00:43                           ;
-; Total                  ; 00:00:21     ; --                      ; --                  ; 00:00:43                           ;
+; Analysis & Elaboration ; 00:00:32     ; 1.0                     ; 4786 MB             ; 00:00:56                           ;
+; Total                  ; 00:00:32     ; --                      ; --                  ; 00:00:56                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
